@@ -17,7 +17,7 @@ A demonstration video of MARIHAR's interface is available in the project assets.
 
 ## Platform Support
 
-**Windows** is the officially supported platform with bundled executables for yt-dlp, FFmpeg, and Deno.
+**Windows** is the officially supported platform. External executables (yt-dlp, FFmpeg, Deno) must be downloaded separately - see [Binaries/README.md](Binaries/README.md) for instructions.
 
 **Linux and macOS** are not yet officially tested or supported. If you want to contribute support for these platforms, please open an issue first to discuss the implementation approach.
 
@@ -83,20 +83,23 @@ The installer includes all required dependencies (yt-dlp, FFmpeg, Deno) and does
 
 - Python 3.8 or higher
 - pip (Python package manager)
-- **yt-dlp**: Included in `Binaries/yt-dlp.exe` (Windows) or install via `pip install yt-dlp==2024.12.13`
-- **FFmpeg**: Included in `Binaries/` (ffmpeg.exe, ffplay.exe, ffprobe.exe on Windows) or install from [ffmpeg.org](https://ffmpeg.org/download.html)
-- **Deno**: Included in `Binaries/deno.exe` (Windows) or install from [deno.land](https://deno.land/)
+- **yt-dlp**: Download from [github.com/yt-dlp/yt-dlp/releases](https://github.com/yt-dlp/yt-dlp/releases) (Windows: place in `Binaries/yt-dlp.exe`) or install via `pip install yt-dlp`
+- **FFmpeg**: Download from [ffmpeg.org](https://ffmpeg.org/download.html) (Windows: place ffmpeg.exe, ffplay.exe, ffprobe.exe in `Binaries/`)
+- **Deno**: Download from [deno.land](https://deno.land/) (Windows: place deno.exe in `Binaries/`)
+
+See [Binaries/README.md](Binaries/README.md) for detailed download instructions.
 
 #### Installation Steps
 
-1. Clone the repository (Git LFS is required for bundled binaries and videos):
+1. Clone the repository:
 ```bash
-git lfs install
 git clone https://github.com/MariharRM/MARIHAR.git
 cd MARIHAR
 ```
 
-2. Create a virtual environment:
+2. Download required binaries (yt-dlp, FFmpeg, Deno) - see [Binaries/README.md](Binaries/README.md) for detailed instructions
+
+3. Create a virtual environment:
 ```bash
 python -m venv venv
 # On Windows:
@@ -105,12 +108,12 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 ```bash
 pip install -r Dependencies/requirements.txt
 ```
 
-4. Start the development server:
+5. Start the development server:
 ```bash
 python Backend/app.py
 ```
@@ -174,6 +177,10 @@ The language is automatically detected from your browser settings, but you can m
 ### Windows Desktop Application
 
 To build a standalone Windows executable:
+
+1. **Download required binaries** (yt-dlp, FFmpeg, Deno) to the `Binaries/` folder - see [Binaries/README.md](Binaries/README.md)
+
+2. **Build the executable**:
 ```bash
 cd Installation
 build_desktop.bat
@@ -182,7 +189,7 @@ build_desktop.bat
 This script will:
 - Check Python installation
 - Install required dependencies
-- Verify all necessary files
+- Verify all necessary files (including binaries in Binaries/)
 - Build the executable using PyInstaller
 - Create a `dist/MARIHAR/` folder with the application
 
