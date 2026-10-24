@@ -69,7 +69,7 @@ MARIHAR/
 
 For the easiest installation on Windows, download the pre-built installer:
 
-1. Download `MARIHAR_Setup_v1.0.0.exe` from the [GitHub Releases](https://github.com/MariharRM/MARIHAR/releases) page *(link to be added after publication)*
+1. Download `MARIHAR_Setup_v1.0.0.exe` from the [GitHub Releases](https://github.com/MariharRM/MARIHAR/releases) page *(https://github.com/MariharRM/MARIHAR/releases/download/v1.0.0/MARIHAR_Setup_v1.0.0.exe)*
 2. Run the installer
 3. Follow the installation wizard
 4. Launch MARIHAR from the Start menu or desktop shortcut
