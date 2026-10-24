@@ -30,7 +30,6 @@ les composants open-source intégrés dans MARIHAR v1.0.0.
   Python-PSF-LICENSE.txt         Python             PSF License v2
 
   Deno-MIT.txt                   deno.exe           MIT
-                                 gdeno.exe
 
 ────────────────────────────────────────────────────────────
   Liens officiels
