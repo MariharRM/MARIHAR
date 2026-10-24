@@ -1,0 +1,343 @@
+/* Marino RAKOTONJANAHARY - rakotonjanaharymarino@gmail.com */
+.main-header {
+    padding: 30px 20px 20px 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.logo-icon {
+    display: none !important;
+}
+
+.header-logo {
+    gap: 0 !important;
+}
+
+.marihar-title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.info-card-modern {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 30px !important;
+}
+
+.thumbnail-container {
+    width: 360px !important;
+    height: 202px !important;
+    flex-shrink: 0;
+}
+
+.info-stats {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+}
+
+.stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 12px 18px !important;
+    min-width: 150px;
+}
+
+.stat-item::before {
+    content: attr(data-label);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: block;
+}
+
+.stat-item span {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-item svg {
+    width: 18px !important;
+    height: 18px !important;
+    color: var(--gold-primary) !important;
+    flex-shrink: 0;
+}
+
+.stat-item:has(#videoViews)::before {
+    content: 'NOMBRE DE VUES';
+}
+
+.stat-item:has(#videoDate)::before {
+    content: 'DATE DE PUBLICATION';
+}
+
+.stat-item:has(#videoDuration)::before {
+    content: 'DURÉE';
+}
+
+.stat-item:has(#videoUploader)::before {
+    content: 'CHAÎNE';
+}
+
+.format-selection-control {
+    display: none !important;
+}
+
+#formatsSection {
+    position: relative;
+}
+
+.columns-modern {
+    background: linear-gradient(135deg,
+        rgba(26, 26, 46, 0.7) 0%,
+        rgba(37, 37, 56, 0.5) 100%
+    ) !important;
+    backdrop-filter: blur(35px) !important;
+    -webkit-backdrop-filter: blur(35px) !important;
+    border: 2px solid var(--border-glass) !important;
+    border-radius: var(--radius-2xl) !important;
+    padding: 60px 40px 40px 40px !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+.columns-modern::before {
+    content: 'CHOISIR LE FORMAT';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-gold);
+    color: var(--bg-primary);
+    padding: 10px 40px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    box-shadow: 
+        0 6px 20px rgba(198, 161, 91, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    z-index: 10;
+    animation: badgePulse 3s ease-in-out infinite;
+    border: 2px solid var(--gold-bronze);
+}
+
+.columns-modern::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    right: 40px;
+    height: 60px;
+    background: rgba(198, 161, 91, 0.08);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.format-options-header {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 5;
+    padding: 15px 25px;
+    background: transparent;
+}
+
+.checkbox-label-modern {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 25px;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.checkbox-label-modern:hover {
+    background: rgba(198, 161, 91, 0.15);
+    border-color: var(--gold-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(198, 161, 91, 0.3);
+}
+
+.checkbox-custom {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--border-glass);
+    border-radius: 6px;
+    background: rgba(26, 26, 46, 0.8);
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+#skipFormatSelection:checked + .checkbox-custom {
+    background: var(--gradient-gold);
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 15px rgba(198, 161, 91, 0.5);
+}
+
+#skipFormatSelection:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bg-primary);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#skipFormatSelection {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.checkbox-label-modern::before {
+    content: '📥';
+    font-size: 20px;
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.columns-modern > .column-modern {
+    margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+    .info-card-modern {
+        padding: 40px !important;
+    }
+    
+    .thumbnail-container {
+        height: 350px !important;
+    }
+    
+    #videoTitle {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-card-modern {
+        padding: 30px !important;
+    }
+    
+    .thumbnail-container {
+        height: 300px !important;
+    }
+    
+    #videoTitle {
+        font-size: 1.8rem !important;
+    }
+    
+    .info-stats {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .columns-modern {
+        padding: 60px 20px 20px 20px !important;
+    }
+    
+    .columns-modern::before {
+        font-size: 0.85rem;
+        padding: 8px 25px;
+        letter-spacing: 2px;
+    }
+    
+    .format-options-header {
+        left: 20px;
+        right: 20px;
+    }
+    
+    .checkbox-label-modern {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail-container {
+        height: 250px !important;
+    }
+    
+    #videoTitle {
+        font-size: 1.5rem !important;
+    }
+    
+    .stat-item {
+        padding: 15px 20px !important;
+    }
+}
+
+.info-card-modern::before {
+    animation-duration: 12s !important;
+}
+
+.thumbnail-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+    ) !important;
+}
+
+.duration-badge,
+#durationBadge {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+    padding: 8px 16px !important;
+    border-radius: var(--radius-md) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.play-icon {
+    width: 80px !important;
+    height: 80px !important;
+    background: var(--gradient-gold) !important;
+    box-shadow: 0 8px 30px rgba(198, 161, 91, 0.6) !important;
+}
+
+.play-icon svg {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+* {
+    transition-property: background-color, border-color, color, box-shadow, opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}

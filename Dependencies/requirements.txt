@@ -1,0 +1,5 @@
+# Marino RAKOTONJANAHARY - rakotonjanaharymarino@gmail.com
+flask==3.0.0
+flask-cors==4.0.0
+yt-dlp==2024.12.13
+psutil

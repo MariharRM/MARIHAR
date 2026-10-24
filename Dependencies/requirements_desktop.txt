@@ -1,0 +1,5 @@
+# Marino RAKOTONJANAHARY - rakotonjanaharymarino@gmail.com
+pywebview>=4.4
+flask>=3.0
+flask-cors>=4.0
+pyinstaller>=6.0

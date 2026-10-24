@@ -1,0 +1,443 @@
+{
+  "nav_home_title": "Home",
+  "nav_about_title": "About",
+  "nav_guide_title": "Guide",
+  "nav_theme_title": "Toggle Theme",
+  "nav_lang_title": "Change Language",
+  "nav_ytdlp_title": "Update / Configure yt-dlp",
+
+  "mobile_home": "Home",
+  "mobile_about": "About",
+  "mobile_privacy": "Privacy",
+  "mobile_contact": "Contact Us",
+  "mobile_guide": "Guide",
+
+  "subtitle": "Download your favorite videos easily",
+
+  "url_placeholder": "Video link or search by title...",
+  "search_mode_1": "Targeted (1 result)",
+  "search_mode_5": "Fast (5 results)",
+  "search_mode_10": "Standard (10 results)",
+  "search_mode_20": "Extended (20 results)",
+  "search_mode_50": "Large (50 results)",
+  "search_mode_100": "Very Large (100 results)",
+  "search_mode_200": "Maximum (200 results)",
+  "search_mode_custom": "Custom",
+
+  "btn_paste": "Paste",
+  "btn_clear": "Clear",
+  "btn_analyze": "ANALYZE",
+
+  "loading_text": "Analyzing...",
+
+  "console_title": "yt-dlp Analysis Console",
+  "console_analysis": "Analysis Console",
+  "console_analyzing": "Analyzing formats...",
+
+  "playlist_videos_title": "Playlist Videos",
+
+  "btn_select_all": "Select All",
+  "btn_deselect_all": "Deselect All",
+
+  "modal_select_format": "Select Format",
+
+  "tab_combined": "Combined",
+  "tab_video": "Video",
+  "tab_audio": "Audio",
+
+  "th_select": "Select",
+  "th_format": "Format",
+  "th_resolution": "Resolution",
+  "th_codec": "Codec",
+  "th_size": "Size",
+  "th_bitrate": "Bitrate",
+  "th_language": "Language",
+
+  "btn_cancel_modal": "Cancel",
+  "btn_confirm": "Confirm Selection",
+  "col_video": "VIDEO",
+  "col_video_sub": "Quality & Resolution",
+
+  "col_audio": "AUDIO",
+  "col_audio_sub": "Languages & Tracks",
+
+  "col_subtitles": "SUBTITLES",
+  "col_subtitles_sub": "Available Languages",
+
+  "col_collapse_title": "Collapse / Expand",
+
+  "subs_original": "Original",
+  "subs_auto": "Auto-generated",
+  "subs_no_original": "No original subtitles",
+  "subs_no_auto": "No auto-generated subtitles",
+
+  "separated_title": "Separated Format",
+  "formats_title": "Choose Format",
+  "formats_sub": "Select video quality, audio and subtitles",
+  "separated_sub": "Choose the video and audio tracks independently",
+  "separated_badge": "Separated",
+  "combined_title": "Combined Formats",
+  "combined_sub": "HLS/DASH - Video + Audio Included",
+  "combined_streaming": "Streaming",
+
+  "combined_info": "Combined formats already include audio, making them ideal for direct playback.",
+
+  "th_format_id": "Format ID",
+  "th_audio_lang": "Audio Language",
+  "th_type": "Type",
+  "th_fps": "FPS",
+
+  "advanced_title": "Advanced Options",
+  "advanced_sub": "Customize your download",
+
+  "cat_subtitles": "Subtitles",
+
+  "opt_burn_subs": "Burn subtitles into video",
+
+  "style_badge": "🎨 Customization",
+
+  "btn_preview": "Preview",
+
+  "label_text_color": "Text Color",
+  "label_outline_color": "Outline Color",
+  "label_font_size": "Font Size",
+
+  "optgroup_small": "Small",
+  "optgroup_medium": "Medium",
+  "optgroup_large": "Large",
+  "optgroup_xlarge": "Extra Large",
+
+  "label_position": "Vertical Position",
+
+  "pos_top": "Top (20%)",
+  "pos_mid_top": "Upper Middle (35%)",
+  "pos_center": "Center (50%)",
+  "pos_mid_bot": "Lower Middle (65%)",
+  "pos_bottom": "Bottom (85%)",
+
+  "label_outline_size": "Outline Thickness",
+
+  "outline_thin": "Thin (1px)",
+  "outline_normal": "Normal (2px)",
+  "outline_thick": "Thick (3px)",
+  "outline_xthick": "Extra Thick (4px)",
+
+  "label_font_style": "Font Style",
+
+  "style_normal": "Normal",
+  "style_bold": "Bold",
+  "style_italic": "Italic",
+
+  "opt_write_subs": "Download subtitles separately",
+
+  "cat_media": "Media",
+
+  "opt_embed_thumb": "Embed thumbnail",
+
+  "opt_extract_audio": "Extract audio only (MP3)",
+
+  "cat_extract": "Section",
+
+  "extract_desc": "Download a specific section of the video",
+
+  "label_start": "Start",
+  "label_end": "End",
+
+  "time_format": "Format: MM:SS (example: 01:30 for 1 minute and 30 seconds)",
+
+  "cat_location": "Location",
+
+  "location_desc": "Choose the destination folder for this download",
+
+  "label_output_dir": "Output Folder",
+
+  "output_placeholder": "Default: Downloads folder",
+
+  "btn_browse": "Browse...",
+
+  "btn_download": "DOWNLOAD",
+
+  "download_sub": "Start downloading",
+
+  "download_info": "Click to start downloading with the selected options",
+
+  "progress_title": "Download in Progress",
+  "progress_wait": "Please wait...",
+
+  "step_analyze": "Analyzing",
+  "step_download": "Downloading",
+  "step_finalize": "Finalizing",
+
+  "stat_size": "Size",
+  "stat_speed": "Speed",
+  "stat_eta": "Time Remaining",
+
+  "btn_cancel_dl": "Cancel Download",
+  "btn_pause_dl": "Pause",
+  "btn_resume_dl": "Resume",
+
+  "console_ytdlp": "yt-dlp Console",
+  "console_inactive": "Inactive",
+
+  "title_copy_logs": "Copy Logs",
+  "title_clear_console": "Clear Console",
+
+  "downloads_title": "Downloaded Files",
+  "downloads_subtitle": "Your download history",
+  "downloads_count_label": "files",
+
+  "empty_text": "No downloaded files",
+  "empty_hint": "Downloaded files will appear here",
+
+  "about_title": "What is MARIHAR ?",
+
+  "alert_enter_url": "Please enter the video URL first",
+  
+  "about_subtitle": "Your modern and powerful video downloading tool",
+
+  "about_mission_title": "Our Mission",
+
+  "about_mission_text": "MARIHAR was created with one simple goal: making video downloading accessible to everyone without compromising quality. We believe you should be able to enjoy your favorite content anytime and anywhere.",
+
+  "about_tech_title": "Cutting-Edge Technology",
+
+  "about_tech_text": "Powered by yt-dlp, one of the world’s leading video downloading tools, MARIHAR provides a modern and intuitive interface while preserving the full power of command-line technology.",
+
+  "about_security_title": "Security & Privacy",
+
+  "about_security_text": "Your data stays yours. MARIHAR runs locally on your device and never sends information to external servers.",
+
+  "about_multilang_title": "Multilingual",
+
+  "about_multilang_text": "Download videos in any language. MARIHAR automatically detects all available audio tracks and subtitles.",
+
+  "about_features_title": "Key Features",
+
+  "feat_4k": "Download up to 4K",
+  "feat_mp3": "High-quality MP3 audio extraction",
+  "feat_subs_multi": "Multilingual subtitles",
+  "feat_subs_burn": "Subtitle burning",
+  "feat_sections": "Section downloads",
+  "feat_ui": "Modern and intuitive interface",
+
+  "guide_title": "How to Use MARIHAR ?",
+
+  "guide_subtitle": "Step-by-step guide to mastering all features",
+
+  "step1_title": "Link or Search",
+
+  "step1_text": "Paste a video URL or simply type a title to search, just like on a search engine. Use the \"Paste\" button to automatically retrieve an URL from your clipboard.",
+
+  "step1_tip": "<strong>Tip:</strong> MARIHAR works with links, song/artist titles, and even multi-platform playlists.",
+
+  "step2_title": "Analyze the Video",
+
+  "step2_text": "Click the ANALYZE button to retrieve all information about the video. MARIHAR will automatically detect:",
+
+  "step2_li1": "All available video qualities (from 144p to 4K)",
+  "step2_li2": "All available audio tracks",
+  "step2_li3": "All available subtitles",
+  "step2_li4": "Combined formats (video + audio)",
+
+  "step3_title": "Choose Your Formats",
+
+  "step3_text": "Select the formats that best suit your needs:",
+
+  "step3_li1": "<strong>Video:</strong> Choose the resolution (720p, 1080p, 4K...)",
+  "step3_li2": "<strong>Audio:</strong> Select your preferred language",
+  "step3_li3": "<strong>Subtitles:</strong> Select the subtitle languages to download",
+
+  "step3_tip": "<strong>Tip:</strong> Combined formats are recommended for smooth playback without synchronization issues.",
+
+  "step4_title": "Advanced Options (Optional)",
+
+  "step4_text": "Customize your download with advanced options:",
+
+  "step4_li1": "<strong>Burn subtitles:</strong> Embed subtitles directly into the video",
+  "step4_li2": "<strong>Extract audio:</strong> Download only the audio track in MP3 format",
+  "step4_li3": "<strong>Section:</strong> Download only a specific part of the video",
+
+  "step5_title": "Download",
+
+  "step5_text1": "Click the DOWNLOAD button and wait while the file downloads. A progress bar will display the progress in real time.",
+
+  "step5_text2": "Once completed, your file will be available in the \"Downloaded Files\" section.",
+
+  "btn_prev": "Previous",
+  "btn_next": "Next",
+  "btn_finish": "Finish",
+
+  "step_counter": "Step {n} / {total}",
+
+  "faq_title": "Frequently Asked Questions",
+
+  "faq1_q": "Which platforms are supported?",
+
+  "faq1_a": "MARIHAR supports YouTube, Facebook, Instagram, TikTok, Twitter, and hundreds of other platforms through yt-dlp.",
+
+  "faq2_q": "Is downloading legal?",
+
+  "faq2_a": "Downloading is allowed for personal use. Always respect copyright laws and platform terms of service.",
+
+  "faq3_q": "Can I download playlists?",
+
+  "faq3_a": "Yes! Simply paste the URL of a playlist and MARIHAR will analyze all included videos.",
+
+  "footer_tagline": "Download your favorite videos freely and elegantly.",
+
+  "footer_features": "FEATURES",
+
+  "footer_feat1": "HD / 4K Video",
+  "footer_feat2": "MP3 Audio Extraction",
+  "footer_feat3": "Playlist Downloads",
+  "footer_feat4": "Embedded Subtitles",
+  "footer_feat5": "Real-time Progress Tracking",
+
+  "footer_legal": "LEGAL INFORMATION & CONTACT",
+
+  "footer_copy": "© 2026 MARIHAR — All rights reserved",
+
+  "footer_ytdlp_lic": "yt-dlp under GPLv3 license",
+  "footer_ffmpeg_lic": "FFmpeg under LGPL license",
+
+  "footer_readme": "View README_UTILISATEUR.txt",
+
+  "footer_bottom_copy": "2026 MARIHAR — Interface & original code by the author",
+
+  "footer_bottom_note": "Third-party components: yt-dlp (Unlicense/GPLv3), FFmpeg (LGPL v2.1+), Flask (BSD-3), Python (PSF)",
+
+  "footer_bottom_made": "Video · Audio · Playlists · Subtitles",
+
+  "dropdown_privacy_title": "Privacy",
+  "dropdown_privacy_desc": "Security and data",
+
+  "dropdown_contact_title": "Contact Us",
+  "dropdown_contact_desc": "Contact the developer",
+
+  "dialog_cancel": "Cancel",
+  "dialog_ok": "OK",
+
+  "quit_title": "Quit MARIHAR",
+  "quit_message": "Are you sure you want to quit MARIHAR?",
+  "btn_quit": "Quit",
+  "btn_cancel_quit": "Cancel",
+
+  "alert_download_complete_title": "Download Complete",
+  "alert_download_complete": "Download completed successfully!",
+  "alert_download_cancelled": "Download cancelled",
+
+  "alert_copied": "Logs copied to clipboard",
+  "alert_preview_error": "Error generating preview",
+  "alert_error_prefix": "Error",
+  "alert_connection_error": "Connection error",
+  "alert_analyze_first": "Please analyze a URL first",
+  "alert_select_video": "Please select at least one video",
+  "alert_cancel_error": "Error during cancellation",
+  "confirm_cancel_title": "Confirm cancellation",
+  "confirm_cancel_message": "Are you sure you want to cancel this download?",
+  "confirm_cancel_yes": "Yes, cancel",
+  "confirm_cancel_no": "No, continue",
+
+  "alert_copy_error": "Copy error",
+
+  "alert_clipboard_error": "Cannot access the clipboard. Please paste manually.",
+
+  "alert_folder_error": "Cannot open folder selector",
+
+  "lang_fr": "Français",
+  "lang_en": "English",
+  "lang_it": "Italiano",
+  "lang_mg": "Malagasy",
+
+  "modal_privacy_title": "Privacy Policy",
+
+  "modal_privacy_data_protection": "Data Protection",
+
+  "modal_privacy_data_desc": "MARIHAR respects your privacy. No personal data is collected or stored on external servers.",
+
+  "modal_privacy_local_data": "Locally Processed Data",
+
+  "modal_privacy_local_1": "✓ URLs analyzed locally only",
+  "modal_privacy_local_2": "✓ Downloads stored on your device",
+  "modal_privacy_local_3": "✓ No data sent to third parties",
+  "modal_privacy_local_4": "✓ Local sessions only",
+
+  "modal_privacy_security": "Security",
+
+  "modal_privacy_security_1": "Secure local application",
+  "modal_privacy_security_2": "No tracking or analytics",
+  "modal_privacy_security_3": "Open-source and transparent code",
+
+  "modal_privacy_cookies": "Cookies",
+
+  "modal_privacy_cookies_desc": "This application does not use tracking cookies. Only temporary sessions required for operation are used.",
+
+  "modal_privacy_warning": "Important:",
+
+  "modal_privacy_warning_desc": "Respect copyright laws and platform terms of use. Only use this tool for content you have the rights to.",
+
+  "modal_contact_title": "Contact Us",
+
+  "modal_contact_dev": "MARIHAR Developer",
+
+  "modal_contact_role": "Full Stack Developer & Owner",
+
+  "modal_contact_email": "Email",
+
+  "modal_contact_location": "Location",
+
+  "modal_contact_message": "For any questions, suggestions, or collaboration opportunities, feel free to contact us. We’ll be happy to help!",
+
+  "ytdlp_auto_update_title": "Auto Update",
+  "ytdlp_auto_update_desc": "Update yt-dlp (blocking)",
+  "ytdlp_custom_title": "Select custom yt-dlp file",
+  "ytdlp_custom_desc": "Use your own yt-dlp.exe",
+  "ytdlp_reset_title": "Reset to default",
+  "ytdlp_reset_desc": "Use built-in version",
+
+  "ytdlp_update_title": "Update yt-dlp",
+  "ytdlp_update_message": "Updating yt-dlp...\n\nPlease wait, this operation may take a few seconds.",
+  "ytdlp_update_result_title": "yt-dlp Update Result",
+
+  "ytdlp_pick_title": "Select custom yt-dlp",
+  "ytdlp_pick_message": "Selecting yt-dlp.exe file...\n\nPlease select a yt-dlp.exe file.",
+  "ytdlp_pick_opening": "Opening selection dialog...\n\nPlease select a yt-dlp.exe file.",
+  "ytdlp_pick_error_title": "Error",
+  "ytdlp_pick_error_path": "yt-dlp path not received or cancelled.",
+  "ytdlp_pick_error_short": "yt-dlp path not received.",
+  "ytdlp_pick_result_title": "yt-dlp Selection Result",
+  "ytdlp_reset_success": "yt-dlp reset to default version.",
+  "ytdlp_network_error": "Network error: ",
+
+  "ytdlp_page_title": "Update & Configure yt-dlp",
+  "ytdlp_page_subtitle": "Manage your yt-dlp version and configure your video downloader",
+  "ytdlp_what_title": "What is yt-dlp?",
+  "ytdlp_what_desc": "yt-dlp is the most powerful and up-to-date video download engine in the world. It enables MARIHAR to download videos from YouTube, TikTok, Instagram and hundreds of other platforms.",
+  "ytdlp_why_title": "Why update?",
+  "ytdlp_why_desc": "Video platforms constantly change their algorithms and protections. Regular yt-dlp updates ensure you can always download your favorite videos without errors.",
+  "ytdlp_custom_page_title": "Custom Version",
+  "ytdlp_custom_page_desc": "You can use your own yt-dlp version if you wish. This is useful if you need specific features or prefer to manage updates yourself.",
+  "ytdlp_config_title": "Simple Configuration",
+  "ytdlp_config_desc": "The yt-dlp configuration menu allows you to update, choose a custom version or reset to default in a few clicks. Everything is designed to be simple and intuitive.",
+  "ytdlp_steps_title": "Usage Steps",
+  "ytdlp_step_1": "Click on the yt-dlp configuration icon in the navigation bar",
+  "ytdlp_step_2": "Choose \"Auto Update\" to update your current version",
+  "ytdlp_step_3": "Choose \"Select custom yt-dlp file\" to use your own version",
+  "ytdlp_step_4": "Choose \"Reset to default\" to return to the built-in version",
+  "ytdlp_tips_title": "Important Tips",
+  "ytdlp_tip_1": "Update yt-dlp regularly to avoid download errors",
+  "ytdlp_tip_2": "Auto update is blocking, wait for it to complete",
+  "ytdlp_tip_3": "Use the built-in version if you don't need special features",
+  "ytdlp_tip_4": "Update logs are displayed in a console window",
+
+  "ignore_format_selection": "Ignore format selection (download subtitles only)",
+  "select_subtitle_to_embed": "Select subtitle to embed",
+  "multiple_subtitles_selected": "You have selected multiple subtitles. Choose the one you want to embed in the video.",
+  "cancel": "Cancel",
+
+  "history_title": "History",
+  "history_empty": "No history",
+  "history_clear": "Clear history",
+  "history_delete": "Delete",
+  "history_close": "Close"
+}

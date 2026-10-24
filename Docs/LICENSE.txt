@@ -1,0 +1,139 @@
+LICENCE ET CONDITIONS D'UTILISATION DE MARIHAR
+================================================
+
+Dernière mise à jour : Octobre 2026
+
+MARIHAR est un logiciel libre. Le code original du projet est
+distribué sous la GNU General Public License version 3
+(GPL-3.0). Le texte intégral de cette licence se trouve dans
+le fichier LICENSE.md à la racine du projet.
+
+En installant, copiant, modifiant ou utilisant ce logiciel,
+vous acceptez la GPL-3.0 pour le programme MARIHAR, ainsi que
+les avertissements ci-dessous concernant le contenu
+téléchargé et les composants tiers.
+
+
+ARTICLE 1 - OBJET
+------------------
+MARIHAR est un logiciel de téléchargement de vidéos depuis des
+plateformes en ligne, basé sur l'outil open source yt-dlp et le
+moteur de traitement multimédia FFmpeg. Il permet à
+l'utilisateur de télécharger des vidéos, d'extraire des pistes
+audio et de gérer les sous-titres.
+
+
+ARTICLE 2 - LICENCE DU LOGICIEL
+---------------------------------
+MARIHAR (code original, interface et documentation du projet)
+est concédé sous la GNU GPL version 3.
+
+Conformément à cette licence, vous êtes notamment autorisé à :
+
+  - Utiliser le logiciel, y compris à des fins personnelles
+  - Copier et redistribuer le logiciel
+  - Étudier et modifier le logiciel
+  - Distribuer des versions modifiées, sous les mêmes
+    conditions GPL-3.0
+
+Aucune clause des présentes ne peut restreindre les droits
+que vous accorde la GPL-3.0. En cas de contradiction, la
+GPL-3.0 prévaut.
+
+Les composants tiers (voir Article 8) restent soumis à leurs
+licences respectives.
+
+
+ARTICLE 3 - PROPRIÉTÉ INTELLECTUELLE
+--------------------------------------
+Le code original de MARIHAR est protégé par le droit d'auteur
+et publié sous GPL-3.0.
+
+Les composants open source intégrés ou utilisés par MARIHAR,
+notamment yt-dlp, FFmpeg, Deno, Flask et Python, restent
+soumis à leurs licences respectives. Les droits accordés par
+ces licences prévalent pour ces composants.
+
+
+ARTICLE 4 - RESPONSABILITÉ
+-----------------------------
+MARIHAR est fourni « tel quel », sans garantie, dans les
+limites prévues par la GPL-3.0 (sections 15 et 16).
+
+L'éditeur de MARIHAR ne saurait être tenu responsable :
+
+  - De l'utilisation que vous faites des vidéos téléchargées
+  - Des éventuelles violations des conditions d'utilisation
+    des plateformes source (YouTube, Facebook, Instagram,
+    TikTok, etc.)
+  - Des dommages directs ou indirects résultant de
+    l'utilisation du logiciel
+  - De l'indisponibilité temporaire ou permanente des
+    plateformes source
+
+L'utilisateur demeure seul responsable du respect des droits
+d'auteur et des lois applicables dans son pays de résidence.
+
+
+ARTICLE 5 - CONTENU TÉLÉCHARGÉ
+---------------------------------
+MARIHAR est un outil technique qui ne stocke, ne filtre ni ne
+contrôle le contenu téléchargé. L'utilisateur s'engage à :
+
+  - Respecter les droits de propriété intellectuelle des
+    créateurs
+  - Se conformer aux lois en vigueur dans sa juridiction
+  - Respecter les conditions d'utilisation des plateformes
+    source
+  - Ne pas utiliser le logiciel pour télécharger du contenu
+    illégal
+
+La licence GPL de MARIHAR n'autorise pas le téléchargement de
+contenus protégés sans droit.
+
+
+ARTICLE 6 - DONNÉES PERSONNELLES
+-----------------------------------
+MARIHAR fonctionne entièrement en local sur votre machine.
+Aucune donnée personnelle n'est collectée, transmise ou
+stockée sur des serveurs externes par l'éditeur. L'éditeur
+n'a accès à aucune information concernant votre utilisation
+du logiciel.
+
+
+ARTICLE 7 - DROIT APPLICABLE
+-------------------------------
+La GPL-3.0 régit la copie, la modification et la distribution
+du logiciel.
+
+Pour tout autre litige non couvert par cette licence, les
+lois de la République de Madagascar peuvent s'appliquer, dans
+les limites du droit applicable.
+
+
+ARTICLE 8 - LICENCES OPEN SOURCE
+-----------------------------------
+MARIHAR utilise plusieurs composants open source, notamment
+yt-dlp, FFmpeg, Deno, Flask et Python.
+
+Ces composants demeurent soumis à leurs licences respectives
+(Unlicense / GPL, LGPL, MIT, BSD, PSF, etc.).
+
+Les textes correspondants se trouvent dans Docs/licenses/
+(ou le dossier « licenses » fourni avec l'application) et
+sur les sites officiels des projets concernés.
+
+Les droits accordés par ces licences s'appliquent aux
+composants concernés. Le programme MARIHAR dans son ensemble
+est distribué sous GPL-3.0.
+
+
+--------------------------------------------------------------
+MARIHAR - v1.0.0
+Copyright (C) 2026 MARIHAR.
+Ce programme est un logiciel libre : vous pouvez le
+redistribuer et/ou le modifier selon les termes de la
+GNU GPL v3. Voir LICENSE.md.
+Certaines bibliothèques et composants sont distribués sous
+licences open source distinctes.
+--------------------------------------------------------------

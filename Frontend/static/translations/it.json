@@ -1,0 +1,444 @@
+{
+  "nav_home_title": "Home",
+  "nav_about_title": "Chi siamo",
+  "nav_guide_title": "Guida",
+  "nav_theme_title": "Cambia tema",
+  "nav_lang_title": "Cambia lingua",
+  "nav_ytdlp_title": "Aggiorna / Configura yt-dlp",
+
+  "mobile_home": "Home",
+  "mobile_about": "Chi siamo",
+  "mobile_privacy": "Privacy",
+  "mobile_contact": "Contattaci",
+  "mobile_guide": "Guida",
+
+  "subtitle": "Scarica facilement i tuoi video preferiti",
+
+  "url_placeholder": "Link del video o ricerca per titolo...",
+  "search_mode_1": "Mirato (1 risultato)",
+  "search_mode_5": "Veloce (5 risultati)",
+  "search_mode_10": "Standard (10 risultati)",
+  "search_mode_20": "Esteso (20 risultati)",
+  "search_mode_50": "Ampio (50 risultati)",
+  "search_mode_100": "Molto ampio (100 risultati)",
+  "search_mode_200": "Massimo (200 risultati)",
+  "search_mode_custom": "Personalizzato",
+
+  "btn_paste": "Incolla",
+  "btn_clear": "Pulisci",
+  "btn_analyze": "ANALIZZA",
+
+  "loading_text": "Analisi in corso...",
+
+  "console_title": "Console di analisi yt-dlp",
+  "console_analysis": "Console di analisi",
+  "console_analyzing": "Analisi dei formati in corso...",
+
+  "playlist_videos_title": "Video della playlist",
+
+  "btn_select_all": "Seleziona tutto",
+  "btn_deselect_all": "Deseleziona tutto",
+
+  "modal_select_format": "Seleziona formato",
+
+  "tab_combined": "Combinati",
+  "tab_video": "Video",
+  "tab_audio": "Audio",
+
+  "th_select": "Selezione",
+  "th_format": "Formato",
+  "th_resolution": "Risoluzione",
+  "th_codec": "Codec",
+  "th_size": "Dimensione",
+  "th_bitrate": "Bitrate",
+  "th_language": "Lingua",
+
+  "btn_cancel_modal": "Annulla",
+  "btn_confirm": "Conferma selezione",
+
+  "col_video": "VIDEO",
+  "col_video_sub": "Qualità & Risoluzione",
+
+  "col_audio": "AUDIO",
+  "col_audio_sub": "Lingue & Tracce",
+
+  "col_subtitles": "SOTTOTITOLI",
+  "col_subtitles_sub": "Lingue disponibili",
+
+  "col_collapse_title": "Riduci / Espandi",
+
+  "subs_original": "Originali",
+  "subs_auto": "Generati automaticamente",
+  "subs_no_original": "Nessun sottotitolo originale",
+  "subs_no_auto": "Nessun sottotitolo generato automaticamente",
+
+  "separated_title": "Formato Separato",
+  "formats_title": "Scegli il Formato",
+  "formats_sub": "Seleziona qualità video, audio e sottotitoli",
+  "separated_sub": "Scegli la traccia video e audio indipendentemente",
+  "separated_badge": "Separato",
+  "combined_title": "Formati combinati",
+  "combined_sub": "HLS/DASH - Video + Audio integrati",
+  "combined_streaming": "Streaming",
+
+  "combined_info": "I formati combinati includono già la traccia audio e sono ideali per la riproduzione diretta.",
+
+  "th_format_id": "ID formato",
+  "th_audio_lang": "Lingua audio",
+  "th_type": "Tipo",
+  "th_fps": "FPS",
+
+  "advanced_title": "Opzioni avanzate",
+  "advanced_sub": "Personalizza il tuo download",
+
+  "cat_subtitles": "Sottotitoli",
+
+  "opt_burn_subs": "Incorpora i sottotitoli nel video",
+
+  "style_badge": "🎨 Personalizzazione",
+
+  "btn_preview": "Anteprima",
+
+  "label_text_color": "Colore del testo",
+  "label_outline_color": "Colore del bordo",
+  "label_font_size": "Dimensione del carattere",
+
+  "optgroup_small": "Piccolo",
+  "optgroup_medium": "Medio",
+  "optgroup_large": "Grande",
+  "optgroup_xlarge": "Molto grande",
+
+  "label_position": "Posizione verticale",
+
+  "pos_top": "Alto (20%)",
+  "pos_mid_top": "Centro-alto (35%)",
+  "pos_center": "Centro (50%)",
+  "pos_mid_bot": "Centro-basso (65%)",
+  "pos_bottom": "Basso (85%)",
+
+  "label_outline_size": "Spessore del bordo",
+
+  "outline_thin": "Sottile (1px)",
+  "outline_normal": "Normale (2px)",
+  "outline_thick": "Spesso (3px)",
+  "outline_xthick": "Molto spesso (4px)",
+
+  "label_font_style": "Stile del carattere",
+
+  "style_normal": "Normale",
+  "style_bold": "Grassetto",
+  "style_italic": "Corsivo",
+
+  "opt_write_subs": "Scarica i sottotitoli separatamente",
+
+  "cat_media": "Media",
+
+  "opt_embed_thumb": "Incorpora la miniatura",
+
+  "opt_extract_audio": "Estrai solo l'audio (MP3)",
+
+  "cat_extract": "Sezione",
+
+  "extract_desc": "Scarica una parte specifica del video",
+
+  "label_start": "Inizio",
+  "label_end": "Fine",
+
+  "time_format": "Formato: MM:SS (esempio: 01:30 per 1 minuto e 30 secondi)",
+
+  "cat_location": "Posizione",
+
+  "location_desc": "Scegli la cartella di destinazione per questo download",
+
+  "label_output_dir": "Cartella di destinazione",
+
+  "output_placeholder": "Predefinita: cartella Download",
+
+  "btn_browse": "Sfoglia...",
+
+  "btn_download": "SCARICA",
+
+  "download_sub": "Avvia il download",
+
+  "download_info": "Clicca per avviare il download con le opzioni selezionate",
+
+  "progress_title": "Download in corso",
+  "progress_wait": "Attendere...",
+
+  "step_analyze": "Analisi",
+  "step_download": "Download",
+  "step_finalize": "Finalizzazione",
+
+  "stat_size": "Dimensione",
+  "stat_speed": "Velocità",
+  "stat_eta": "Tempo rimanente",
+
+  "btn_cancel_dl": "Annulla download",
+  "btn_pause_dl": "Pausa",
+  "btn_resume_dl": "Riprendi",
+
+  "alert_enter_url": "Per favore, inserisci prima l'URL del video",
+
+  "console_ytdlp": "Console yt-dlp",
+  "console_inactive": "Inattivo",
+
+  "title_copy_logs": "Copia log",
+  "title_clear_console": "Cancella console",
+
+  "downloads_title": "File scaricati",
+  "downloads_subtitle": "Cronologia dei tuoi download",
+  "downloads_count_label": "file",
+
+  "empty_text": "Nessun file scaricato",
+  "empty_hint": "I file scaricati appariranno qui",
+
+  "about_title": "Cos'è MARIHAR ?",
+
+  "about_subtitle": "Il tuo strumento moderno e potente per scaricare video",
+
+  "about_mission_title": "La nostra missione",
+
+  "about_mission_text": "MARIHAR nasce da un obiettivo semplice: rendere il download dei video accessibile a tutti senza compromettere la qualità. Crediamo che tu debba poter godere dei tuoi contenuti preferiti ovunque e in qualsiasi momento.",
+
+  "about_tech_title": "Tecnologia all'avanguardia",
+
+  "about_tech_text": "Basato su yt-dlp, uno dei migliori strumenti al mondo per il download di video, MARIHAR offre un'interfaccia moderna e intuitiva mantenendo tutta la potenza della riga di comando.",
+
+  "about_security_title": "Sicurezza & Privacy",
+
+  "about_security_text": "I tuoi dati restano tuoi. MARIHAR funziona localmente sul tuo dispositivo e nessuna informazione viene inviata a server esterni.",
+
+  "about_multilang_title": "Multilingue",
+
+  "about_multilang_text": "Scarica video in qualsiasi lingua. MARIHAR rileva automaticamente tutte le tracce audio e i sottotitoli disponibili.",
+
+  "about_features_title": "Funzionalità principali",
+
+  "feat_4k": "Download fino al 4K",
+  "feat_mp3": "Estrazione audio MP3 ad alta qualità",
+  "feat_subs_multi": "Sottotitoli multilingue",
+  "feat_subs_burn": "Incorporazione dei sottotitoli",
+  "feat_sections": "Download di sezioni",
+  "feat_ui": "Interfaccia moderna e intuitiva",
+
+  "guide_title": "Come utilizzare MARIHAR ?",
+
+  "guide_subtitle": "Guida passo dopo passo per padroneggiare tutte le funzionalità",
+
+  "step1_title": "Link o Ricerca",
+
+  "step1_text": "Incolla l'URL di un video o inserisci semplicemente un titolo per effettuare una ricerca, proprio come su un motore di ricerca. Usa il pulsante \"Incolla\" per recuperare un URL dagli appunti.",
+
+  "step1_tip": "<strong>Suggerimento:</strong> MARIHAR funziona con link, titoli di canzoni/artisti e persino playlist multi-piattaforma.",
+
+  "step2_title": "Analizza il video",
+
+  "step2_text": "Clicca sul pulsante ANALIZZA per ottenere tutte le informazioni sul video. MARIHAR rileverà automaticamente:",
+
+  "step2_li1": "Tutte le qualità video disponibili (da 144p a 4K)",
+  "step2_li2": "Tutte le tracce audio disponibili",
+  "step2_li3": "Tutti i sottotitoli disponibili",
+  "step2_li4": "I formati combinati (video + audio)",
+
+  "step3_title": "Scegli i formati",
+
+  "step3_text": "Seleziona i formati che preferisci:",
+
+  "step3_li1": "<strong>Video:</strong> Scegli la risoluzione (720p, 1080p, 4K...)",
+  "step3_li2": "<strong>Audio:</strong> Seleziona la lingua desiderata",
+  "step3_li3": "<strong>Sottotitoli:</strong> Seleziona le lingue da scaricare",
+
+  "step3_tip": "<strong>Consiglio:</strong> I formati combinati sono consigliati per una riproduzione diretta senza problemi di sincronizzazione.",
+
+  "step4_title": "Opzioni avanzate (opzionale)",
+
+  "step4_text": "Personalizza il download con le opzioni avanzate:",
+
+  "step4_li1": "<strong>Incorpora sottotitoli:</strong> Integra i sottotitoli direttamente nel video",
+  "step4_li2": "<strong>Estrai audio:</strong> Scarica solo la traccia audio in formato MP3",
+  "step4_li3": "<strong>Sezione:</strong> Scarica solo una parte specifica del video",
+
+  "step5_title": "Scarica",
+
+  "step5_text1": "Clicca sul pulsante SCARICA e attendi il completamento del download. Una barra di avanzamento mostrerà il progresso in tempo reale.",
+
+  "step5_text2": "Una volta completato, il file sarà disponibile nella sezione \"File scaricati\".",
+
+  "btn_prev": "Precedente",
+  "btn_next": "Successivo",
+  "btn_finish": "Finito",
+
+  "step_counter": "Passo {n} / {total}",
+
+  "faq_title": "Domande frequenti",
+
+  "faq1_q": "Quali piattaforme sono supportate?",
+
+  "faq1_a": "MARIHAR supporta YouTube, Facebook, Instagram, TikTok, Twitter e centinaia di altre piattaforme tramite yt-dlp.",
+
+  "faq2_q": "Il download è legale?",
+
+  "faq2_a": "Il download è consentito per uso personale. Rispetta sempre il copyright e i termini di utilizzo delle piattaforme.",
+
+  "faq3_q": "Posso scaricare playlist?",
+
+  "faq3_a": "Sì! Incolla semplicemente l'URL di una playlist e MARIHAR analizzerà tutti i video contenuti.",
+
+  "footer_tagline": "Scarica liberamente i tuoi video preferiti con eleganza.",
+
+  "footer_features": "FUNZIONALITÀ",
+
+  "footer_feat1": "Video HD / 4K",
+  "footer_feat2": "Estrazione audio MP3",
+  "footer_feat3": "Download playlist",
+  "footer_feat4": "Sottotitoli integrati",
+  "footer_feat5": "Monitoraggio avanzamento in tempo reale",
+
+  "footer_legal": "NOTE LEGALI & CONTATTI",
+
+  "footer_copy": "© 2026 MARIHAR — Tutti i diritti riservati",
+
+  "footer_ytdlp_lic": "yt-dlp sotto licenza GPLv3",
+  "footer_ffmpeg_lic": "FFmpeg sotto licenza LGPL",
+
+  "footer_readme": "Visualizza README_UTILISATEUR.txt",
+
+  "footer_bottom_copy": "2026 MARIHAR — Interfaccia e codice originale dell'autore",
+
+  "footer_bottom_note": "Componenti di terze parti: yt-dlp (Unlicense/GPLv3), FFmpeg (LGPL v2.1+), Flask (BSD-3), Python (PSF)",
+
+  "footer_bottom_made": "Video · Audio · Playlist · Sottotitoli",
+
+  "dropdown_privacy_title": "Privacy",
+  "dropdown_privacy_desc": "Sicurezza e dati",
+
+  "dropdown_contact_title": "Contattaci",
+  "dropdown_contact_desc": "Contatta lo sviluppatore",
+
+  "dialog_cancel": "Annulla",
+  "dialog_ok": "OK",
+
+  "quit_title": "Esci da MARIHAR",
+  "quit_message": "Sei sicuro di voler uscire da MARIHAR?",
+  "btn_quit": "Esci",
+  "btn_cancel_quit": "Annulla",
+
+  "alert_download_complete_title": "Download completato",
+  "alert_download_complete": "Download completato con successo!",
+  "alert_download_cancelled": "Download annullato",
+
+  "alert_copied": "Log copiati negli appunti",
+  "alert_preview_error": "Errore durante la generazione dell'anteprima",
+  "alert_error_prefix": "Errore",
+  "alert_connection_error": "Errore di connessione",
+  "alert_analyze_first": "Analizza prima un URL",
+  "alert_select_video": "Seleziona almeno un video",
+  "alert_cancel_error": "Errore durante l'annullamento",
+  "confirm_cancel_title": "Conferma annullamento",
+  "confirm_cancel_message": "Sei sicuro di voler annullare questo download?",
+  "confirm_cancel_yes": "Sì, annulla",
+  "confirm_cancel_no": "No, continua",
+
+  "alert_copy_error": "Errore durante la copia",
+
+  "alert_clipboard_error": "Impossibile accedere agli appunti. Incolla manualmente.",
+
+  "alert_folder_error": "Impossibile aprire il selettore delle cartelle",
+
+  "lang_fr": "Français",
+  "lang_en": "English",
+  "lang_it": "Italiano",
+  "lang_mg": "Malagasy",
+
+  "modal_privacy_title": "Politica sulla privacy",
+
+  "modal_privacy_data_protection": "Protezione dei dati",
+
+  "modal_privacy_data_desc": "MARIHAR rispetta la tua privacy. Nessun dato personale viene raccolto o memorizzato su server esterni.",
+
+  "modal_privacy_local_data": "Dati elaborati localmente",
+
+  "modal_privacy_local_1": "✓ URL analizzati solo localmente",
+  "modal_privacy_local_2": "✓ Download salvati sul tuo dispositivo",
+  "modal_privacy_local_3": "✓ Nessun dato inviato a terze parti",
+  "modal_privacy_local_4": "✓ Solo sessione locale",
+
+  "modal_privacy_security": "Sicurezza",
+
+  "modal_privacy_security_1": "Applicazione locale sicura",
+  "modal_privacy_security_2": "Nessun tracking o analytics",
+  "modal_privacy_security_3": "Codice open-source e trasparente",
+
+  "modal_privacy_cookies": "Cookie",
+
+  "modal_privacy_cookies_desc": "Questa applicazione non utilizza cookie di tracciamento. Solo sessioni temporanee necessarie al funzionamento.",
+
+  "modal_privacy_warning": "Importante:",
+
+  "modal_privacy_warning_desc": "Rispetta il copyright e i termini di utilizzo delle piattaforme. Usa questo strumento solo per contenuti di cui possiedi i diritti.",
+
+  "modal_contact_title": "Contattaci",
+
+  "modal_contact_dev": "Sviluppatore MARIHAR",
+
+  "modal_contact_role": "Sviluppatore Full Stack & Proprietario",
+
+  "modal_contact_email": "Email",
+
+  "modal_contact_location": "Posizione",
+
+  "modal_contact_message": "Per qualsiasi domanda, suggerimento o collaborazione, non esitare a contattarci. Saremo felici di risponderti!",
+
+  "ytdlp_auto_update_title": "Aggiornamento automatico",
+  "ytdlp_auto_update_desc": "Aggiorna yt-dlp (bloccante)",
+  "ytdlp_custom_title": "Seleziona file yt-dlp personalizzato",
+  "ytdlp_custom_desc": "Usa il tuo yt-dlp.exe",
+  "ytdlp_reset_title": "Ripristina predefinito",
+  "ytdlp_reset_desc": "Usa versione integrata",
+
+  "ytdlp_update_title": "Aggiorna yt-dlp",
+  "ytdlp_update_message": "Aggiornamento di yt-dlp in corso...\n\nAttendere prego, questa operazione può richiedere alcuni secondi.",
+  "ytdlp_update_result_title": "Risultato aggiornamento yt-dlp",
+
+  "ytdlp_pick_title": "Seleziona yt-dlp personalizzato",
+  "ytdlp_pick_message": "Selezione del file yt-dlp.exe...\n\nSeleziona un file yt-dlp.exe.",
+  "ytdlp_pick_opening": "Apertura finestra di selezione...\n\nSeleziona un file yt-dlp.exe.",
+  "ytdlp_pick_error_title": "Errore",
+  "ytdlp_pick_error_path": "Percorso yt-dlp non ricevuto o annullato.",
+  "ytdlp_pick_error_short": "Percorso yt-dlp non ricevuto.",
+  "ytdlp_pick_result_title": "Risultato selezione yt-dlp",
+  "ytdlp_reset_success": "yt-dlp ripristinato alla versione predefinita.",
+  "ytdlp_network_error": "Errore di rete: ",
+
+  "ytdlp_page_title": "Aggiorna & Configura yt-dlp",
+  "ytdlp_page_subtitle": "Gestisci la tua versione yt-dlp e configura il tuo downloader video",
+  "ytdlp_what_title": "Cos'è yt-dlp?",
+  "ytdlp_what_desc": "yt-dlp è il motore di download video più potente e aggiornato al mondo. Permette a MARIHAR di scaricare video da YouTube, TikTok, Instagram e centinaia di altre piattaforme.",
+  "ytdlp_why_title": "Perché aggiornare?",
+  "ytdlp_why_desc": "Le piattaforme video cambiano costantemente i loro algoritmi e protezioni. Aggiornamenti regolari di yt-dlp garantiscono che puoi sempre scaricare i tuoi video preferiti senza errori.",
+  "ytdlp_custom_page_title": "Versione personalizzata",
+  "ytdlp_custom_page_desc": "Puoi usare la tua versione di yt-dlp se lo desideri. È utile se hai bisogno di funzionalità specifiche o preferisci gestire tu stesso gli aggiornamenti.",
+  "ytdlp_config_title": "Configurazione semplice",
+  "ytdlp_config_desc": "Il menu di configurazione yt-dlp ti permette di aggiornare, scegliere una versione personalizzata o ripristinare quella predefinita in pochi clic. Tutto è progettato per essere semplice e intuitivo.",
+  "ytdlp_steps_title": "Passaggi di utilizzo",
+  "ytdlp_step_1": "Clicca sull'icona di configurazione yt-dlp nella barra di navigazione",
+  "ytdlp_step_2": "Scegli \"Aggiornamento automatico\" per aggiornare la tua versione attuale",
+  "ytdlp_step_3": "Scegli \"Seleziona file yt-dlp personalizzato\" per usare la tua versione",
+  "ytdlp_step_4": "Scegli \"Ripristina predefinito\" per tornare alla versione integrata",
+  "ytdlp_tips_title": "Consigli importanti",
+  "ytdlp_tip_1": "Aggiorna yt-dlp regolarmente per evitare errori di download",
+  "ytdlp_tip_2": "L'aggiornamento automatico è bloccante, attendi che finisca",
+  "ytdlp_tip_3": "Usa la versione integrata se non hai bisogno di funzionalità speciali",
+  "ytdlp_tip_4": "I log di aggiornamento sono visualizzati in una finestra console",
+
+  "ignore_format_selection": "Ignora selezione formato (scarica solo sottotitoli)",
+  "select_subtitle_to_embed": "Seleziona sottotitolo da incorporare",
+  "multiple_subtitles_selected": "Hai selezionato più sottotitoli. Scegli quello che vuoi incorporare nel video.",
+  "cancel": "Annulla",
+
+  "history_title": "Cronologia",
+  "history_empty": "Nessuna cronologia",
+  "history_clear": "Svuota cronologia",
+  "history_delete": "Elimina",
+  "history_close": "Chiudi"
+}

@@ -1,0 +1,1908 @@
+<!-- Marino RAKOTONJANAHARY - rakotonjanaharymarino@gmail.com -->
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARIHAR</title>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Luxury-Glass Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=22">
+
+    <!-- Glass Design System -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/glass-design.css') }}?v=1">
+
+    <!-- Title Animations -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/title-animations.css') }}?v=1">
+
+    <!-- Page Layout -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/page-layout.css') }}?v=1">
+
+    <!-- Format Section -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/format-section.css') }}?v=1">
+
+    <!-- Script pour appliquer le responsive via JavaScript -->
+    <script>
+        (function() {
+            window.addEventListener('DOMContentLoaded', function() {
+                var container = document.querySelector('.url-input-container');
+                if (container) {
+                    container.style.display = 'flex';
+                    container.style.flexWrap = 'wrap';
+                    container.style.gap = '15px';
+
+                    var wrapper = document.querySelector('.url-input-wrapper');
+                    if (wrapper) {
+                        wrapper.style.flex = '1 1 100%';
+                        wrapper.style.minWidth = '100%';
+                    }
+
+                    var buttons = container.querySelectorAll('button');
+                    buttons.forEach(function(btn) {
+                        btn.style.flex = '1 1 auto';
+                        btn.style.minWidth = 'auto';
+                    });
+                }
+            });
+        })();
+    </script>
+    
+    <!-- Theme Handler -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('marihar-theme');
+            document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
+        })();
+    </script>
+    
+    <!-- Number Formatting Helper -->
+    <script>
+        // Format numbers with spaces (1000000 → 1 000 000)
+        function formatNumber(num) {
+            if (!num) return num;
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        }
+        
+        // Apply formatting to all stat items when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Format views
+            const viewsElement = document.getElementById('videoViews');
+            if (viewsElement && viewsElement.textContent) {
+                const views = viewsElement.textContent.replace(/[^\d]/g, '');
+                if (views) {
+                    viewsElement.textContent = formatNumber(views) + ' vues';
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="curtain-background" aria-hidden="true"></div>
+
+    <!-- Navigation Bar Premium -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <img src="{{ url_for('static', filename='Logo_marino.png') }}?v=3" alt="MARIHAR Logo" class="nav-logo-image">
+                </div>
+                <span class="brand-name">MARIHAR</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-page="home" data-i18n-title="nav_home_title" title="Accueil">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <div class="nav-link-underline"></div>
+                </a>
+                <div class="nav-dropdown-wrapper">
+                    <a href="#" class="nav-link" data-page="about" data-i18n-title="nav_about_title" title="À propos" id="aboutDropdownToggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <div class="nav-link-underline"></div>
+                    </a>
+                </div>
+                <a href="#" class="nav-link" data-page="guide" data-i18n-title="nav_guide_title" title="Guide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    <div class="nav-link-underline"></div>
+                </a>
+                
+                <!-- Language Switcher -->
+                <div class="lang-switcher-wrapper" id="langSwitcherWrapper">
+                    <button class="lang-toggle" id="langToggle" data-i18n-title="nav_lang_title" title="Changer de langue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <span class="lang-current-code" id="langCurrentCode">FR</span>
+                    </button>
+                </div>
+
+                <!-- YTDLP Update / Custom Path -->
+                <div class="nav-dropdown-wrapper" id="ytdlpDropdownWrapper">
+                    <a href="#" class="nav-link" id="ytdlpDropdownToggle" data-i18n-title="nav_ytdlp_title" title="Mise à jour / Configuration yt-dlp" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6v6h-6"></path>
+                            <path d="M4 18v-6h6"></path>
+                            <path d="M7 7l10 10"></path>
+                        </svg>
+                        <div class="nav-link-underline"></div>
+                    </a>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" data-i18n-title="nav_theme_title" title="Basculer le thème">
+                    <svg id="sunIcon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg id="moonIcon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 18.79 3.79A9 9 0 0 0 12 21a9 9 0 0 0 9-9.21z"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Dropdown yt-dlp (en dehors de la navbar pour éviter le clip-path) -->
+    <div class="nav-dropdown" id="ytdlpDropdown">
+        <button type="button" class="dropdown-item" id="ytdlpAutoUpdateBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <div class="dropdown-item-content">
+                <span class="dropdown-item-title" data-i18n="ytdlp_auto_update_title">Mise à jour automatique</span>
+                <span class="dropdown-item-desc" data-i18n="ytdlp_auto_update_desc">Mettre à jour yt-dlp (bloquant)</span>
+            </div>
+        </button>
+        <button type="button" class="dropdown-item" id="ytdlpPickCustomBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+            <div class="dropdown-item-content">
+                <span class="dropdown-item-title" data-i18n="ytdlp_custom_title">Sélectionner un fichier yt-dlp personnalisé</span>
+                <span class="dropdown-item-desc" data-i18n="ytdlp_custom_desc">Utiliser votre propre yt-dlp.exe</span>
+            </div>
+        </button>
+        <button type="button" class="dropdown-item" id="ytdlpResetToDefaultBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+            </svg>
+            <div class="dropdown-item-content">
+                <span class="dropdown-item-title" data-i18n="ytdlp_reset_title">Réinitialiser par défaut</span>
+                <span class="dropdown-item-desc" data-i18n="ytdlp_reset_desc">Utiliser la version intégrée</span>
+            </div>
+        </button>
+    </div>
+
+    <!-- Dropdown Langue (en dehors de la navbar pour éviter le clip-path) -->
+    <div class="lang-dropdown" id="langDropdown" style="display:none; position:fixed; z-index:99999;">
+        <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">
+            <span class="lang-flag">🇫🇷</span>
+            <span class="lang-name">Français</span>
+        </button>
+        <button class="lang-option" data-lang="en" onclick="setLanguage('en')">
+            <span class="lang-flag">🇬🇧</span>
+            <span class="lang-name">English</span>
+        </button>
+        <button class="lang-option" data-lang="it" onclick="setLanguage('it')">
+            <span class="lang-flag">🇮🇹</span>
+            <span class="lang-name">Italiano</span>
+        </button>
+        <button class="lang-option" data-lang="mg" onclick="setLanguage('mg')">
+            <span class="lang-flag">🇲🇬</span>
+            <span class="lang-name">Malagasy</span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu (en dehors de la navbar pour éviter le clip-path) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#" class="mobile-nav-link active" data-page="home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span data-i18n="mobile_home">Accueil</span>
+            </a>
+            
+            <!-- Mobile Dropdown À propos -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle" data-page="about">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="lang fr">À propos</span>
+                    <span class="lang en" style="display:none;">About</span>
+                    <span class="lang it" style="display:none;">Chi siamo</span>
+                    <span class="lang mg" style="display:none;">Momba anay</span>
+                    <svg class="mobile-dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item" data-modal="privacy">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span class="lang fr">Confidentialité</span>
+                        <span class="lang en" style="display:none;">Privacy</span>
+                        <span class="lang it" style="display:none;">Privacy</span>
+                        <span class="lang mg" style="display:none;">Tsiambaratelo</span>
+                    </a>
+                    <a href="#" class="mobile-dropdown-item" data-modal="contact">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span class="lang fr">Nous contacter</span>
+                        <span class="lang en" style="display:none;">Contact us</span>
+                        <span class="lang it" style="display:none;">Contattaci</span>
+                        <span class="lang mg" style="display:none;">Mifandraisa aminay</span>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="#" class="mobile-nav-link" data-page="guide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                <span class="lang fr">Guide</span>
+                <span class="lang en" style="display:none;">Guide</span>
+                <span class="lang it" style="display:none;">Guida</span>
+                <span class="lang mg" style="display:none;">Torolalana</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <div class="header-logo">
+                    <div class="logo-icon">
+                        <img src="{{ url_for('static', filename='Logo_marino.png') }}?v=3" alt="MARIHAR Logo" class="logo-image">
+                    </div>
+                    <div class="logo-text">
+                        <div class="title-videos-wrapper">
+                            <div class="video-left-container">
+                                <video class="video-left" autoplay muted loop playsinline>
+                                    <source src="{{ url_for('static', filename='Left.mp4') }}" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="title-video-container">
+                                <video class="title-video" autoplay muted loop playsinline>
+                                    <source src="{{ url_for('static', filename='marihar_title.mp4') }}" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-right-container">
+                                <video class="video-right" autoplay muted loop playsinline>
+                                    <source src="{{ url_for('static', filename='Right.mp4') }}" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <p class="subtitle lang fr">Téléchargez vos vidéos préférées en toute simplicité</p>
+                        <p class="subtitle lang en" style="display:none;">Download your favorite videos with ease</p>
+                        <p class="subtitle lang it" style="display:none;">Scarica i tuoi video preferiti con facilità</p>
+                        <p class="subtitle lang mg" style="display:none;">Alao ny horonantsary tianao mora foana</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Home Page Content -->
+        <div id="homePage" class="page-content active">
+
+        <!-- URL Input Section -->
+        <section class="url-section">
+            <div class="url-input-container">
+                <div class="url-input-wrapper">
+                    <div class="input-icon left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                    </div>
+                    <input type="text" id="urlInput" data-i18n-placeholder="url_placeholder" placeholder="Lien de la vidéo ou recherche par titre..." autocomplete="off" />
+                    <div class="search-mode-container">
+                        <select id="searchMode" class="search-mode-select">
+                            <option value="ytsearch" data-i18n="search_mode_1">Ciblé (1 résultat)</option>
+                            <option value="ytsearch5" data-i18n="search_mode_5">Rapide (5 résultats)</option>
+                            <option value="ytsearch10" data-i18n="search_mode_10">Standard (10 résultats)</option>
+                            <option value="ytsearch20" data-i18n="search_mode_20" selected>Étendu (20 résultats)</option>
+                            <option value="ytsearch50" data-i18n="search_mode_50">Large (50 résultats)</option>
+                            <option value="ytsearch100" data-i18n="search_mode_100">Très large (100 résultats)</option>
+                            <option value="ytsearch200" data-i18n="search_mode_200">Maximum (200 résultats)</option>
+                            <option value="custom" data-i18n="search_mode_custom">Personnalisé</option>
+                        </select>
+                        <input type="number" id="customSearchLimit" class="custom-search-limit hidden" min="1" max="1000" placeholder="Nombre" />
+                    </div>
+                </div>
+                <button id="pasteBtn" class="input-action-btn" title="Coller">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    <span class="lang fr">Coller</span>
+                    <span class="lang en" style="display:none;">Paste</span>
+                    <span class="lang it" style="display:none;">Incolla</span>
+                    <span class="lang mg" style="display:none;">Apetaho</span>
+                </button>
+                <button id="clearBtn" class="input-action-btn hidden" title="Supprimer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    <span class="lang fr">Supprimer</span>
+                    <span class="lang en" style="display:none;">Clear</span>
+                    <span class="lang it" style="display:none;">Cancella</span>
+                    <span class="lang mg" style="display:none;">Fafao</span>
+                </button>
+                <button id="historyBtn" class="input-action-btn" title="Historique" data-i18n-title="history_title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span class="lang fr">Historique</span>
+                    <span class="lang en" style="display:none;">History</span>
+                    <span class="lang it" style="display:none;">Cronologia</span>
+                    <span class="lang mg" style="display:none;">Tantara</span>
+                </button>
+                <button id="analyzeBtn" class="btn-analyze">
+                    <span class="btn-text lang fr">ANALYSER</span>
+                    <span class="btn-text lang en" style="display:none;">ANALYZE</span>
+                    <span class="btn-text lang it" style="display:none;">ANALIZZA</span>
+                    <span class="btn-text lang mg" style="display:none;">MAMAKAFAKA</span>
+                    <span class="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div id="loadingIndicator" class="hidden">
+                <div class="loading-animation">
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                </div>
+                <span data-i18n="loading_text">Analyse en cours...</span>
+            </div>
+        </section>
+
+        <!-- Analysis Console Section -->
+        <section id="analysisConsoleSection" class="hidden collapsible-section" data-section="analysisConsole">
+            <div class="analysis-console-card">
+                <div class="analysis-console-header collapsible-header">
+                    <div class="analysis-console-title-row">
+                        <div class="analysis-console-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                            <span data-i18n="console_title">Console d'analyse yt-dlp</span>
+                        </div>
+                        <div class="analysis-console-meta">
+                            <span id="analysisElapsedTime" class="elapsed-time-badge hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span id="elapsedTimeText">00:00</span>
+                            </span>
+                            <button id="cancelAnalysisBtn" class="cancel-analysis-btn hidden" data-i18n-title="btn_cancel_analysis_title" title="Annuler l'analyse" onclick="showCancelAnalysisConfirmation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                                </svg>
+                                <span class="lang fr">Annuler</span>
+                                <span class="lang en" style="display:none;">Cancel</span>
+                                <span class="lang it" style="display:none;">Annulla</span>
+                                <span class="lang mg" style="display:none;">Ajanony</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="collapse-btn-section" data-section="analysisConsole" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                        <svg class="collapse-icon-section" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <div class="analysis-console-content" id="analysisConsoleContent">
+                    <div class="analysis-console-logs" id="analysisConsoleLogs"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Info Section -->
+        <section id="videoInfo" class="hidden">
+            <div class="info-card-modern">
+                <div class="thumbnail-container">
+                    <img id="thumbnail" src="" alt="Miniature">
+                    <div class="thumbnail-overlay">
+                        <div class="play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="duration-badge" id="durationBadge"></div>
+                </div>
+                <div class="info-content">
+                    <div class="info-header">
+                        <h2 id="videoTitle"></h2>
+                        <div class="uploader-info">
+                            <div class="uploader-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <p id="videoUploader"></p>
+                        </div>
+                    </div>
+                    <div class="info-stats">
+                        <div class="stat-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <span id="videoViews"></span>
+                        </div>
+                        <div class="stat-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span id="videoDate"></span>
+                        </div>
+                        <div class="stat-item" id="durationStat">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span id="videoDuration"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Playlist Videos Section -->
+        <section id="playlistVideosSection" class="hidden">
+            <div class="playlist-videos-card">
+                <div class="playlist-videos-header">
+                    <div class="playlist-videos-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3>Vidéos de la playlist</h3>
+                        <span class="playlist-videos-count" id="playlistVideosCount">0 vidéos</span>
+                    </div>
+                <div class="playlist-videos-actions">
+                    <button id="selectAllBtn" class="playlist-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 11 12 14 22 4"></polyline>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                        Tout sélectionner
+                    </button>
+                    <button id="deselectAllBtn" class="playlist-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        </svg>
+                        Tout désélectionner
+                    </button>
+                </div>
+                </div>
+                <div class="playlist-videos-list" id="playlistVideosList">
+                    <!-- Les vidéos seront ajoutées ici dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Playlist Video Modal - Format Selection -->
+        <div id="playlistVideoModal" class="modal hidden">
+            <div class="modal-content playlist-video-modal-content">
+                <div class="modal-header">
+                    <h3 id="playlistVideoModalTitle" data-i18n="modal_select_format">Sélectionner le format</h3>
+                    <button class="modal-close" onclick="closePlaylistVideoModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="playlistVideoModalLoader" class="modal-loader">
+                        <div class="spinner"></div>
+                        <p data-i18n="console_analyzing">Analyse des formats...</p>
+                        
+                        <!-- Console d'analyse spécifique -->
+                        <div class="playlist-analysis-console">
+                            <div class="console-header">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <span data-i18n="console_analysis">Console d'analyse</span>
+                            </div>
+                            <div class="console-output" id="playlistAnalysisConsoleOutput"></div>
+                        </div>
+                    </div>
+                    <div id="playlistVideoModalContent" class="hidden">
+                        <div class="playlist-video-info-modal">
+                            <img id="playlistVideoModalThumbnail" src="" alt="" class="playlist-video-modal-thumbnail">
+                            <div class="playlist-video-modal-details">
+                                <h4 id="playlistVideoModalVideoTitle"></h4>
+                                <p id="playlistVideoModalVideoDuration"></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Format Selection Tabs -->
+                        <div class="format-tabs">
+                            <button class="format-tab active" data-tab="combined" onclick="switchPlaylistFormatTab('combined')" data-i18n="tab_combined">
+                                Combinés (<span id="playlistCombinedCount">0</span>)
+                            </button>
+                            <button class="format-tab" data-tab="video" onclick="switchPlaylistFormatTab('video')" data-i18n="tab_video">
+                                Vidéo (<span id="playlistVideoCount">0</span>)
+                            </button>
+                            <button class="format-tab" data-tab="audio" onclick="switchPlaylistFormatTab('audio')" data-i18n="tab_audio">
+                                Audio (<span id="playlistAudioCount">0</span>)
+                            </button>
+                        </div>
+                        
+                        <!-- Combined Formats -->
+                        <div id="playlistCombinedFormats" class="format-tab-content active">
+                            <table class="format-selection-table">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="th_select">Sélection</th>
+                                        <th data-i18n="th_format">Format</th>
+                                        <th data-i18n="th_resolution">Résolution</th>
+                                        <th data-i18n="th_codec">Codec</th>
+                                        <th data-i18n="th_size">Taille</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="playlistCombinedTableBody"></tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Video Formats -->
+                        <div id="playlistVideoFormats" class="format-tab-content hidden">
+                            <table class="format-selection-table">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="th_select">Sélection</th>
+                                        <th data-i18n="th_format">Format</th>
+                                        <th data-i18n="th_resolution">Résolution</th>
+                                        <th data-i18n="th_codec">Codec</th>
+                                        <th data-i18n="th_bitrate">Bitrate</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="playlistVideoTableBody"></tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Audio Formats -->
+                        <div id="playlistAudioFormats" class="format-tab-content hidden">
+                            <table class="format-selection-table">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="th_select">Sélection</th>
+                                        <th data-i18n="th_format">Format</th>
+                                        <th data-i18n="th_codec">Codec</th>
+                                        <th data-i18n="th_bitrate">Bitrate</th>
+                                        <th data-i18n="th_language">Langue</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="playlistAudioTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" onclick="closePlaylistVideoModal()" data-i18n="btn_cancel_modal">Annuler</button>
+                    <button class="btn-primary" onclick="confirmPlaylistVideoFormat()" data-i18n="btn_confirm">Confirmer la sélection</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content - Format Selection Section (Collapsible like Advanced Options) -->
+        <section id="formatsSection" class="hidden collapsible-section" data-section="formats">
+            <div class="formats-header collapsible-header">
+                <div class="formats-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                        <circle cx="12" cy="10" r="3" fill="currentColor" fill-opacity="0.3"></circle>
+                    </svg>
+                </div>
+                <div class="formats-title">
+                    <h3 data-i18n="formats_title">Choisir le Format</h3>
+                    <span class="formats-subtitle" data-i18n="formats_sub">Sélectionnez la qualité vidéo, audio et sous-titres</span>
+                </div>
+                <button class="collapse-btn-section" data-section="formats" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                    <svg class="collapse-icon-section" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="collapsible-content" id="formatsContent">
+
+                <!-- Section Séparée (Vidéo + Audio indépendants) -->
+                <div class="separated-section-modern collapsible-section" id="separatedSection">
+                    <div class="separated-header collapsible-header">
+                        <div class="separated-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="separated-title">
+                            <h3 data-i18n="separated_title">Format Séparé</h3>
+                            <span class="separated-subtitle" data-i18n="separated_sub">Choisissez la piste vidéo et audio indépendamment</span>
+                        </div>
+                        <div class="separated-controls">
+                            <div class="separated-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                                </svg>
+                                <span data-i18n="separated_badge">Séparé</span>
+                            </div>
+                            <button class="collapse-btn-section" data-section="separated" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                                <svg class="collapse-icon-section" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapsible-content" id="separatedContent">
+
+                        <!-- Checkbox Option -->
+                        <div class="format-checkbox-option">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="skipFormatSelection">
+                                <span class="toggle-slider"></span>
+                                <span class="toggle-label" data-i18n="ignore_format_selection">Télécharger uniquement les sous-titres</span>
+                            </label>
+                        </div>
+
+                <!-- Video Column -->
+                <div class="column-modern video-column" id="videoColumn">
+                    <div class="column-header-modern">
+                        <div class="header-icon video-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="header-title">
+                            <h3 data-i18n="col_video">VIDÉO</h3>
+                            <span class="header-subtitle" data-i18n="th_resolution">Qualité & Résolution</span>
+                        </div>
+                        <div class="column-controls">
+                            <span class="count-badge" id="videoCount">0</span>
+                            <button class="collapse-btn" data-column="video" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                                <svg class="collapse-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column-content" id="videoContent">
+                        <div class="table-container-modern">
+                        <table id="videoTable" class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th class="select-col"></th>
+                                    <th data-sort="resolution">
+                                        <span class="th-content">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                            </svg>
+                                            <span data-i18n="th_resolution">Résolution</span>
+                                        </span>
+                                    </th>
+                                    <th data-sort="fps" data-i18n="th_fps">FPS</th>
+                                    <th data-sort="vcodec" data-i18n="th_codec">Codec</th>
+                                    <th data-sort="vbr" data-i18n="th_bitrate">Bitrate</th>
+                                    <th data-sort="filesize" data-i18n="th_size">Taille</th>
+                                </tr>
+                            </thead>
+                            <tbody id="videoTableBody">
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Column -->
+                <div class="column-modern audio-column" id="audioColumn">
+                    <div class="column-header-modern">
+                        <div class="header-icon audio-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="header-title">
+                            <h3 data-i18n="col_audio">AUDIO</h3>
+                            <span class="header-subtitle" data-i18n="col_audio_sub">Langues & Pistes</span>
+                        </div>
+                        <div class="column-controls">
+                            <span class="count-badge" id="audioCount">0</span>
+                            <button class="collapse-btn" data-column="audio" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                                <svg class="collapse-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column-content" id="audioContent">
+                        <div class="table-container-modern">
+                            <table id="audioTable" class="modern-table">
+                                <thead>
+                                    <tr>
+                                        <th class="select-col"></th>
+                                        <th data-sort="language">
+                                            <span class="th-content">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                                </svg>
+                                                <span data-i18n="th_language">Langue</span>
+                                            </span>
+                                        </th>
+                                        <th data-sort="abr" data-i18n="th_bitrate">Bitrate</th>
+                                        <th data-sort="acodec" data-i18n="th_codec">Codec</th>
+                                        <th data-i18n="th_type">Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="audioTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                    </div><!-- End separatedContent -->
+                </div><!-- End separatedSection -->
+
+            <!-- Combined Formats Section - Modern Design -->
+            <div class="combined-section-modern collapsible-section" id="combinedSection">
+                <div class="combined-header collapsible-header">
+                    <div class="combined-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                            <circle cx="12" cy="10" r="3" fill="currentColor" fill-opacity="0.3"></circle>
+                        </svg>
+                    </div>
+                    <div class="combined-title">
+                        <h3 data-i18n="combined_title">Formats Combinés</h3>
+                        <span class="combined-subtitle" data-i18n="combined_sub">HLS/DASH - Vidéo + Audio intégrés</span>
+                    </div>
+                    <div class="combined-controls">
+                        <div class="combined-badge">
+                            <span class="badge-icon">⚡</span>
+                            <span data-i18n="combined_streaming">Streaming</span>
+                        </div>
+                        <button class="collapse-btn-section" data-section="combined" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                            <svg class="collapse-icon-section" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapsible-content" id="combinedContent">
+                    <div class="table-container-modern combined-table-wrapper">
+                    <table id="combinedTable" class="modern-table combined-table">
+                        <thead>
+                            <tr>
+                                <th class="select-col"></th>
+                                <th>
+                                    <span class="th-content">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                                        </svg>
+                                        <span data-i18n="th_format_id">Format ID</span>
+                                    </span>
+                                </th>
+                                <th>
+                                    <span class="th-content">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        </svg>
+                                        <span data-i18n="th_resolution">Résolution</span>
+                                    </span>
+                                </th>
+                                <th data-i18n="th_fps">FPS</th>
+                                <th>
+                                    <span class="th-content">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        </svg>
+                                        <span data-i18n="th_audio_lang">Langue Audio</span>
+                                    </span>
+                                </th>
+                                <th data-i18n="th_type">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody id="combinedTableBody">
+                        </tbody>
+                    </table>
+                </div>
+                    <div class="combined-info">
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            <span data-i18n="combined_info">Les formats combinés incluent déjà la piste audio - idéal pour une lecture directe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtitles Section - Modern Design -->
+            <div class="subtitle-section-card collapsible-section" id="subtitleSection">
+                <div class="subtitle-section-header collapsible-header">
+                    <div class="subtitle-section-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="subtitle-section-title">
+                        <h3 data-i18n="col_subtitles">SOUS-TITRES</h3>
+                        <span class="subtitle-section-sub" data-i18n="col_subtitles_sub">Langues disponibles</span>
+                    </div>
+                    <div class="subtitle-section-controls">
+                        <button class="collapse-btn-section" data-section="subtitleSection" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                            <svg class="collapse-icon-section" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapsible-content" id="subtitleSectionContent">
+                    <div class="subtitles-scroll-container">
+                        <div class="subtitles-container-modern">
+                            <div class="subtitle-section-modern">
+                                <div class="section-header">
+                                    <span class="section-dot original"></span>
+                                    <h4 data-i18n="subs_original">Originaux</h4>
+                                    <span class="section-badge">Uploader</span>
+                                </div>
+                                <div id="originalSubs" class="subtitle-list-modern"></div>
+                            </div>
+                            <div class="subtitle-section-modern">
+                                <div class="section-header">
+                                    <span class="section-dot auto"></span>
+                                    <h4 data-i18n="subs_auto">Auto-générés</h4>
+                                    <span class="section-badge ai">IA</span>
+                                </div>
+                                <div id="autoSubs" class="subtitle-list-modern"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div><!-- End collapsible-content -->
+        </section><!-- End formatsSection -->
+
+        <!-- Advanced Options - Modern Design -->
+        <section id="advancedOptions" class="hidden collapsible-section" data-section="advanced">
+            <div class="advanced-header collapsible-header">
+                <div class="advanced-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </div>
+                <div class="advanced-title">
+                    <h3 data-i18n="advanced_title">Options Avancées</h3>
+                    <span class="advanced-subtitle" data-i18n="advanced_sub">Personnalisez votre téléchargement</span>
+                </div>
+                <button class="collapse-btn-section" data-section="advanced" data-i18n-title="col_collapse_title" title="Réduire/Agrandir">
+                    <svg class="collapse-icon-section" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="collapsible-content" id="advancedContent">
+
+            <!-- Options principales -->
+            <div class="options-categories">
+                <!-- Catégorie Sous-titres -->
+                <div class="option-category">
+                    <div class="category-header">
+                        <div class="category-icon subtitle-cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h4 data-i18n="cat_subtitles">Sous-titres</h4>
+                    </div>
+                    <div class="category-content">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="burnSubs">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label" data-i18n="opt_burn_subs">Incruster les sous-titres (hardcoded)</span>
+                        </label>
+                        
+                        <!-- Options de personnalisation des sous-titres -->
+                        <div id="subtitleStyleOptions" class="subtitle-style-section hidden">
+                            <div class="style-header">
+                                <span class="style-badge" data-i18n="style_badge">🎨 Personnalisation</span>
+                                <button id="previewSubtitleBtn" class="btn-preview-modern" data-i18n="btn_preview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    Prévisualiser
+                                </button>
+                            </div>
+                            <div id="subtitlePreview" class="preview-image hidden">
+                                <img src="" alt="Prévisualisation des sous-titres">
+                            </div>
+                            <div class="style-grid-modern">
+                                <div class="style-option-modern">
+                                    <label data-i18n="label_text_color">Couleur du texte</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="subColor" value="#ffffff">
+                                        <span class="color-value">#FFFFFF</span>
+                                    </div>
+                                </div>
+                                <div class="style-option-modern">
+                                    <label data-i18n="label_outline_color">Couleur du contour</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="subOutlineColor" value="#000000">
+                                        <span class="color-value">#000000</span>
+                                    </div>
+                                </div>
+                                <div class="style-option-modern">
+                                    <label data-i18n="label_font_size">Taille de police</label>
+                                    <select id="subFontSize" class="modern-select">
+                                        <optgroup label="Petites" data-i18n-label="optgroup_small">
+                                            <option value="16">16px</option>
+                                            <option value="18">18px</option>
+                                            <option value="20">20px</option>
+                                            <option value="22">22px</option>
+                                        </optgroup>
+                                        <optgroup label="Moyennes" data-i18n-label="optgroup_medium">
+                                            <option value="24" selected>24px</option>
+                                            <option value="26">26px</option>
+                                            <option value="28">28px</option>
+                                            <option value="30">30px</option>
+                                        </optgroup>
+                                        <optgroup label="Grandes" data-i18n-label="optgroup_large">
+                                            <option value="32">32px</option>
+                                            <option value="34">34px</option>
+                                            <option value="36">36px</option>
+                                            <option value="40">40px</option>
+                                        </optgroup>
+                                        <optgroup label="Très grandes" data-i18n-label="optgroup_xlarge">
+                                            <option value="48">48px</option>
+                                            <option value="56">56px</option>
+                                            <option value="64">64px</option>
+                                            <option value="72">72px</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="style-option-modern">
+                                    <label data-i18n="label_position">Position verticale</label>
+                                    <select id="subPosition" class="modern-select">
+                                        <option value="20" data-i18n="pos_top">Haut (20%)</option>
+                                        <option value="35" data-i18n="pos_mid_top">Milieu-haut (35%)</option>
+                                        <option value="50" selected data-i18n="pos_center">Centre (50%)</option>
+                                        <option value="65" data-i18n="pos_mid_bot">Milieu-bas (65%)</option>
+                                        <option value="85" data-i18n="pos_bottom">Bas (85%)</option>
+                                    </select>
+                                </div>
+                                <div class="style-option-modern">
+                                    <label data-i18n="label_outline_size">Épaisseur du contour</label>
+                                    <select id="subOutline" class="modern-select">
+                                        <option value="1" data-i18n="outline_thin">Fin (1px)</option>
+                                        <option value="2" selected data-i18n="outline_normal">Normal (2px)</option>
+                                        <option value="3" data-i18n="outline_thick">Épais (3px)</option>
+                                        <option value="4" data-i18n="outline_xthick">Très épais (4px)</option>
+                                    </select>
+                                </div>
+                                <div class="style-option-modern">
+                                    <label data-i18n="label_font_style">Style de police</label>
+                                    <select id="subFontStyle" class="modern-select">
+                                        <option value="0" data-i18n="style_normal">Normal</option>
+                                        <option value="1" selected data-i18n="style_bold">Gras</option>
+                                        <option value="2" data-i18n="style_italic">Italique</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="writeAutoSubs">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label" data-i18n="opt_write_subs">Télécharger les sous-titres séparément</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Catégorie Média -->
+                <div class="option-category">
+                    <div class="category-header">
+                        <div class="category-icon media-cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h4 data-i18n="cat_media">Média</h4>
+                    </div>
+                    <div class="category-content">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="embedThumbnail">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label" data-i18n="opt_embed_thumb">Incruster la miniature</span>
+                        </label>
+
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="extractAudio">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-label" data-i18n="opt_extract_audio">Extraire l'audio uniquement (MP3)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Catégorie Section -->
+                <div class="option-category">
+                    <div class="category-header">
+                        <div class="category-icon section-cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h4 data-i18n="cat_extract">Extrait</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="section-description" data-i18n="extract_desc">Télécharger une section spécifique de la vidéo</p>
+                        <div class="time-inputs-modern">
+                            <div class="time-field">
+                                <label data-i18n="label_start">Début</label>
+                                <input type="text" id="sectionStart" placeholder="00:00" pattern="[0-9]{2}:[0-9]{2}">
+                            </div>
+                            <span class="time-separator">→</span>
+                            <div class="time-field">
+                                <label data-i18n="label_end">Fin</label>
+                                <input type="text" id="sectionEnd" placeholder="00:00" pattern="[0-9]{2}:[0-9]{2}">
+                            </div>
+                        </div>
+                        <small class="time-format" data-i18n="time_format">Format: MM:SS (ex: 01:30 pour 1 minute 30)</small>
+                    </div>
+                </div>
+
+                <!-- Catégorie Emplacement -->
+                <div class="option-category">
+                    <div class="category-header">
+                        <div class="category-icon media-cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10a2 2 0 0 0-2-2h-7l-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"></path>
+                            </svg>
+                        </div>
+                        <h4 data-i18n="cat_location">Emplacement</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="section-description" data-i18n="location_desc">Choisissez le dossier de destination pour ce téléchargement</p>
+                        <div class="time-inputs-modern">
+                            <div class="time-field" style="flex: 1;">
+                                <label data-i18n="label_output_dir">Dossier de sortie</label>
+                                <input type="text" id="outputDirInput" data-i18n-placeholder="output_placeholder" placeholder="Par défaut: dossier Downloads">
+                            </div>
+                        </div>
+                        <button type="button" id="outputDirBrowseBtn" class="btn-preview-modern" style="margin-top: 10px;" data-i18n="btn_browse">
+                            Parcourir...
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Download Button - Modern Design -->
+        <section id="downloadSection" class="hidden">
+            <div class="download-section-modern">
+                <button id="downloadBtn" class="btn-download-modern">
+                    <div class="download-btn-content">
+                        <div class="download-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </div>
+                        <div class="download-text">
+                            <span class="download-main" data-i18n="btn_download">TÉLÉCHARGER</span>
+                            <span class="download-sub" data-i18n="download_sub">Lancer le téléchargement</span>
+                        </div>
+                    </div>
+                    <div class="download-shine"></div>
+                </button>
+                <div class="download-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span data-i18n="download_info">Cliquez pour démarrer le téléchargement avec les options sélectionnées</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section - Modern Design -->
+        <section id="progressSection" class="hidden">
+            <div class="progress-card-modern">
+                <div class="progress-header">
+                    <div class="progress-status">
+                        <div class="status-icon downloading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </div>
+                        <div class="status-text">
+                            <h3 data-i18n="progress_title">Téléchargement en cours</h3>
+                            <span class="status-subtitle" data-i18n="progress_wait">Veuillez patienter...</span>
+                        </div>
+                    </div>
+                    <div class="progress-percentage">
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-container-modern">
+                        <div id="progressBar" class="progress-bar-modern">
+                            <div class="progress-glow"></div>
+                        </div>
+                    </div>
+                    <div class="progress-steps">
+                        <span class="step active" data-i18n="step_analyze">Analyse</span>
+                        <span class="step-line"></span>
+                        <span class="step" data-i18n="step_download">Téléchargement</span>
+                        <span class="step-line"></span>
+                        <span class="step" data-i18n="step_finalize">Finalisation</span>
+                    </div>
+                </div>
+
+                <div class="progress-stats">
+                    <div class="stat-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <div class="stat-info">
+                            <span class="stat-label" data-i18n="stat_size">Taille</span>
+                            <span id="progressSize" class="stat-value">--</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        <div class="stat-info">
+                            <span class="stat-label" data-i18n="stat_speed">Vitesse</span>
+                            <span id="progressSpeed" class="stat-value">--</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <div class="stat-info">
+                            <span class="stat-label" data-i18n="stat_eta">Temps restant</span>
+                            <span id="progressEta" class="stat-value">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-actions-modern">
+                    <button id="pauseBtn" class="btn-pause-modern hidden" data-i18n="btn_pause_dl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                        Mettre en pause
+                    </button>
+                    <button id="resumeBtn" class="btn-resume-modern hidden" data-i18n="btn_resume_dl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Reprendre
+                    </button>
+                    <button id="cancelBtn" class="btn-cancel-modern" data-i18n="btn_cancel_dl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                        Annuler le téléchargement
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Console Log -->
+        <section id="consoleSection" class="hidden">
+            <div class="console-card console-card-premium">
+                <div class="console-header console-header-premium">
+                    <div class="console-header-left">
+                        <svg class="console-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <span class="console-title" data-i18n="console_ytdlp">Console yt-dlp</span>
+                        <span class="console-status-badge" id="consoleStatusBadge">
+                            <span class="console-status-dot" id="consoleStatusDot"></span>
+                            <span class="console-status-text" id="consoleStatusText" data-i18n="console_inactive">Inactif</span>
+                        </span>
+                    </div>
+                    <div class="console-header-actions">
+                        <button id="copyConsole" class="btn-console-action" data-i18n-title="title_copy_logs" title="Copier les logs">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                        <button id="clearConsole" class="btn-console-action" data-i18n-title="title_clear_console" title="Effacer la console">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="consoleOutput" class="console-output-premium"></div>
+            </div>
+        </section>
+
+        <!-- Downloads List - Modern Design -->
+        <section id="downloadsListSection" class="downloads-section-modern">
+            <div class="downloads-header">
+                <div class="downloads-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <div class="downloads-title">
+                    <h3 data-i18n="downloads_title">Fichiers téléchargés</h3>
+                    <span class="downloads-subtitle" data-i18n="downloads_subtitle">Historique de vos téléchargements</span>
+                </div>
+                <div class="downloads-count" id="downloadsCount">
+                    <span class="count-number">0</span>
+                    <span class="count-label" data-i18n="downloads_count_label">fichiers</span>
+                </div>
+            </div>
+            
+            <div id="downloadsList" class="downloads-list-modern">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                    </div>
+                    <p class="empty-text" data-i18n="empty_text">Aucun fichier téléchargé</p>
+                    <p class="empty-hint" data-i18n="empty_hint">Les fichiers téléchargés apparaîtront ici</p>
+                </div>
+            </div>
+        </section>
+        </div>
+        <!-- End Home Page -->
+
+        <!-- About Page -->
+        <div id="aboutPage" class="page-content">
+            <div class="about-section">
+                <div class="about-header">
+                    <h2 data-i18n="about_title">Qu'est-ce que MARIHAR ?</h2>
+                    <p class="about-subtitle" data-i18n="about_subtitle">Votre outil de téléchargement vidéo moderne et puissant</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about_mission_title">Notre Mission</h3>
+                        <p data-i18n="about_mission_text">MARIHAR est né d'une volonté simple : rendre le téléchargement de vidéos accessible à tous, sans compromis sur la qualité. Nous croyons que vous devriez pouvoir profiter de votre contenu préféré, partout et à tout moment.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about_tech_title">Technologie de Pointe</h3>
+                        <p data-i18n="about_tech_text">Basé sur yt-dlp, la référence mondiale du téléchargement vidéo, MARIHAR offre une interface moderne et intuitive tout en conservant toute la puissance de l'outil en ligne de commande.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about_security_title">Sécurité & Confidentialité</h3>
+                        <p data-i18n="about_security_text">Vos données restent vos données. MARIHAR fonctionne localement sur votre machine. Aucune information n'est envoyée sur des serveurs externes, garantissant votre confidentialité totale.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about_multilang_title">Multilingue</h3>
+                        <p data-i18n="about_multilang_text">Extraire les vidéos dans n'importe quelle langue. MARIHAR détecte automatiquement toutes les pistes audio et sous-titres disponibles pour une expérience personnalisée.</p>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                    <h3 data-i18n="about_features_title">Fonctionnalités Clés</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="feat_4k">Téléchargement jusqu'en 4K</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="feat_mp3">Extraction audio MP3 haute qualité</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="feat_subs_multi">Sous-titres multilingues</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="feat_subs_burn">Incrustation de sous-titres</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="feat_sections">Téléchargement de sections</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="feat_ui">Interface moderne et intuitive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YTDLP Configuration Page -->
+        <div id="ytdlpPage" class="page-content">
+            <div class="about-section">
+                <div class="about-header">
+                    <h2 data-i18n="ytdlp_page_title">Mise à jour & Configuration yt-dlp</h2>
+                    <p class="about-subtitle" data-i18n="ytdlp_page_subtitle">Gérez votre version de yt-dlp et configurez votre téléchargeur vidéo</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="ytdlp_what_title">Qu'est-ce que yt-dlp ?</h3>
+                        <p data-i18n="ytdlp_what_desc">yt-dlp est le moteur de téléchargement vidéo le plus puissant et le plus à jour au monde. C'est lui qui permet à MARIHAR de télécharger des vidéos depuis YouTube, TikTok, Instagram et des centaines d'autres plateformes.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M12 8v4"></path>
+                                <path d="M12 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="ytdlp_why_title">Pourquoi mettre à jour ?</h3>
+                        <p data-i18n="ytdlp_why_desc">Les plateformes de vidéo changent constamment leurs algorithmes et protections. Une mise à jour régulière de yt-dlp garantit que vous pouvez toujours télécharger vos vidéos préférées sans erreurs.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="ytdlp_custom_title">Version personnalisée</h3>
+                        <p data-i18n="ytdlp_custom_desc">Vous pouvez utiliser votre propre version de yt-dlp si vous le souhaitez. C'est utile si vous avez besoin de fonctionnalités spécifiques ou si vous préférez gérer vous-même les mises à jour.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="ytdlp_config_title">Configuration simple</h3>
+                        <p data-i18n="ytdlp_config_desc">Le menu de configuration yt-dlp vous permet de mettre à jour, choisir une version personnalisée ou réinitialiser à la version par défaut en quelques clics. Tout est conçu pour être simple et intuitif.</p>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                    <h3 data-i18n="ytdlp_steps_title">Étapes d'utilisation</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-number">1</span>
+                            <span data-i18n="ytdlp_step_1">Cliquez sur l'icône de configuration yt-dlp dans la barre de navigation</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">2</span>
+                            <span data-i18n="ytdlp_step_2">Choisissez "Mise à jour automatique" pour mettre à jour votre version actuelle</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">3</span>
+                            <span data-i18n="ytdlp_step_3">Choisissez "Sélectionner un fichier yt-dlp personnalisé" pour utiliser votre propre version</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">4</span>
+                            <span data-i18n="ytdlp_step_4">Choisissez "Réinitialiser par défaut" pour revenir à la version intégrée</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                    <h3 data-i18n="ytdlp_tips_title">Conseils importants</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="ytdlp_tip_1">Mettez à jour yt-dlp régulièrement pour éviter les erreurs de téléchargement</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="ytdlp_tip_2">La mise à jour automatique est bloquante, attendez qu'elle se termine</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="ytdlp_tip_3">Utilisez la version intégrée si vous n'avez pas besoin de fonctionnalités spéciales</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✓</span>
+                            <span data-i18n="ytdlp_tip_4">Les logs de mise à jour sont affichés dans une fenêtre de console</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guide Page -->
+        <div id="guidePage" class="page-content">
+            <div class="guide-section">
+                <div class="guide-header">
+                    <h2 data-i18n="guide_title">Comment utiliser MARIHAR ?</h2>
+                    <p class="guide-subtitle" data-i18n="guide_subtitle">Guide étape par étape pour maîtriser toutes les fonctionnalités</p>
+                </div>
+
+                <!-- Stepper Navigation -->
+                <div class="stepper-container">
+                    <div class="stepper-progress">
+                        <div class="stepper-progress-bar" id="stepperProgressBar"></div>
+                    </div>
+                    <div class="stepper-indicators" id="stepperIndicators">
+                        <div class="stepper-dot active" data-step="0"></div>
+                        <div class="stepper-dot" data-step="1"></div>
+                        <div class="stepper-dot" data-step="2"></div>
+                        <div class="stepper-dot" data-step="3"></div>
+                        <div class="stepper-dot" data-step="4"></div>
+                    </div>
+                </div>
+
+                <!-- Steps Container -->
+                <div class="stepper-steps-wrapper">
+                    <div class="guide-steps-slider" id="guideStepsSlider">
+                        <div class="guide-step active">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3 data-i18n="step1_title">Lien ou Recherche</h3>
+                                <p data-i18n="step1_text">Collez l'URL d'une vidéo ou saisissez simplement un titre pour effectuer une recherche, comme sur un moteur de recherche. Utilisez le bouton "Coller" pour récupérer une URL depuis votre presse-papiers.</p>
+                                <div class="step-tip">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span data-i18n-html="step1_tip"><strong>Astuce :</strong> MARIHAR fonctionne avec les liens, les titres de chansons/artistes et même les playlists multi-plateformes.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3 data-i18n="step2_title">Analyser la vidéo</h3>
+                                <p data-i18n="step2_text">Cliquez sur le bouton "ANALYSER" pour récupérer toutes les informations sur la vidéo. MARIHAR détectera automatiquement :</p>
+                                <ul>
+                                    <li data-i18n-html="step2_li1">Toutes les qualités vidéo disponibles (de 144p à 4K)</li>
+                                    <li data-i18n-html="step2_li2">Toutes les pistes audio (différentes langues)</li>
+                                    <li data-i18n-html="step2_li3">Tous les sous-titres disponibles</li>
+                                    <li data-i18n-html="step2_li4">Les formats combinés (vidéo + audio intégrés)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="guide-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3 data-i18n="step3_title">Choisir vos formats</h3>
+                                <p data-i18n="step3_text">Sélectionnez les formats qui vous conviennent :</p>
+                                <ul>
+                                    <li data-i18n-html="step3_li1"><strong>Vidéo :</strong> Choisissez la résolution (720p, 1080p, 4K...)</li>
+                                    <li data-i18n-html="step3_li2"><strong>Audio :</strong> Sélectionnez la langue souhaitée</li>
+                                    <li data-i18n-html="step3_li3"><strong>Sous-titres :</strong> Cochez les langues à télécharger</li>
+                                </ul>
+                                <div class="step-tip">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span data-i18n-html="step3_tip"><strong>Conseil :</strong> Les formats combinés sont recommandés pour une lecture directe sans problème de synchronisation.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3 data-i18n="step4_title">Options avancées (optionnel)</h3>
+                                <p data-i18n="step4_text">Personnalisez votre téléchargement avec les options avancées :</p>
+                                <ul>
+                                    <li data-i18n-html="step4_li1"><strong>Incruster les sous-titres :</strong> Intégrez les sous-titres directement dans la vidéo</li>
+                                    <li data-i18n-html="step4_li2"><strong>Extraire l'audio :</strong> Téléchargez uniquement la piste audio en MP3</li>
+                                    <li data-i18n-html="step4_li3"><strong>Section :</strong> Téléchargez uniquement une partie de la vidéo</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="guide-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3 data-i18n="step5_title">Télécharger</h3>
+                                <p data-i18n="step5_text1">Cliquez sur le bouton "TÉLÉCHARGER" et patientez pendant le téléchargement. Une barre de progression vous indiquera l'avancement en temps réel.</p>
+                                <p data-i18n="step5_text2">Une fois terminé, votre fichier sera disponible dans la section "Fichiers téléchargés".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="stepper-navigation">
+    <button class="stepper-btn stepper-btn-prev" id="stepperPrevBtn" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span class="lang fr">Précédent</span>
+        <span class="lang en" style="display:none;">Previous</span>
+        <span class="lang it" style="display:none;">Precedente</span>
+        <span class="lang mg" style="display:none;">Teo aloha</span>
+    </button>
+    
+    <div class="stepper-step-counter" id="stepperCounter" data-current-step="1" data-total-steps="5">
+        <span class="lang fr" id="stepTextFr">Étape 1 / 5</span>
+        <span class="lang en" id="stepTextEn" style="display:none;">Step 1 / 5</span>
+        <span class="lang it" id="stepTextIt" style="display:none;">Passo 1 / 5</span>
+        <span class="lang mg" id="stepTextMg" style="display:none;">Dingana 1 / 5</span>
+    </div>
+    
+    <button class="stepper-btn stepper-btn-next" id="stepperNextBtn">
+        <span class="lang fr">Suivant</span>
+        <span class="lang en" style="display:none;">Next</span>
+        <span class="lang it" style="display:none;">Avanti</span>
+        <span class="lang mg" style="display:none;">Manaraka</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+    </button>
+</div>
+
+                <div class="guide-faq">
+                    <h3 data-i18n="faq_title">Questions fréquentes</h3>
+                    <div class="faq-item">
+                        <h4 data-i18n="faq1_q">Quels sites sont supportés ?</h4>
+                        <p data-i18n="faq1_a">MARIHAR supporte YouTube, Facebook, Instagram, TikTok, Twitter et des centaines d'autres plateformes via yt-dlp.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 data-i18n="faq2_q">Le téléchargement est-il légal ?</h4>
+                        <p data-i18n="faq2_a">Le téléchargement est autorisé pour un usage personnel. Respectez toujours les droits d'auteur et les conditions d'utilisation des plateformes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 data-i18n="faq3_q">Puis-je télécharger des playlists ?</h4>
+                        <p data-i18n="faq3_a">Oui ! Collez simplement l'URL d'une playlist et MARIHAR analysera toutes les vidéos qu'elle contient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer - Modern Design -->
+        <footer class="footer-modern">
+            <div class="footer-content">
+
+                <!-- ── Section principale : Brand + Colonnes ── -->
+                <div class="footer-main">
+
+                    <!-- Brand Column -->
+                    <div class="footer-brand-col">
+                        <div class="footer-brand">
+                            <div class="footer-icon">
+                                <img src="{{ url_for('static', filename='Logo_marino.png') }}?v=3" alt="MARIHAR Logo" class="footer-logo-image">
+                            </div>
+                            <span class="footer-name">MARIHAR</span>
+                        </div>
+                        <p class="footer-tagline lang fr">Téléchargez vos vidéos préférées en toute liberté, avec élégance.</p>
+                        <p class="footer-tagline lang en" style="display:none;">Download your favorite videos freely, with elegance.</p>
+                        <p class="footer-tagline lang it" style="display:none;">Scarica i tuoi video preferiti liberamente, con eleganza.</p>
+                        <p class="footer-tagline lang mg" style="display:none;">Alao malalaka sy am-pahamendrehana ireo horonan-tsary tianao indrindra.</p>
+                        <div class="footer-badges-row">
+                            <span class="footer-badge footer-badge-version">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                v1.0.0
+                            </span>
+                            <span class="footer-badge footer-badge-tech">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                yt-dlp
+                            </span>
+                            <span class="footer-badge footer-badge-tech">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                                FFmpeg
+                            </span>
+                        </div>
+                        <p class="footer-punchline" lang="it">Libera te stesso dai vincoli sociali, ma tieni presente l'inarrestabile avanzare del progresso.</p>
+                    </div>
+
+                    <!-- Séparateur vertical -->
+                    <div class="footer-vsep" aria-hidden="true"></div>
+
+                    <!-- Colonne : Fonctionnalités -->
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            <span data-i18n="footer_features">FONCTIONNALITÉS</span>
+                        </h4>
+                        <ul class="footer-col-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                <span data-i18n="footer_feat1">Vidéo HD / 4K</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                                <span data-i18n="footer_feat2">Extraction audio MP3</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                                <span data-i18n="footer_feat3">Téléchargement de playlists</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                <span data-i18n="footer_feat4">Sous-titres intégrés</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span data-i18n="footer_feat5">Suivi de progression en temps réel</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne : Légal & Contact -->
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span data-i18n="footer_legal">LÉGAL & CONTACT</span>
+                        </h4>
+                        <ul class="footer-col-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M14.83 14.83a4 4 0 1 1 0-5.66"/></svg>
+                                <span data-i18n="footer_copy">© 2026 MARIHAR — Tous droits réservés</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <span data-i18n="footer_ytdlp_lic">yt-dlp sous licence GPLv3</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <span data-i18n="footer_ffmpeg_lic">FFmpeg sous licence LGPL</span>
+                            </li>
+                            <li class="footer-contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <span>rakotonjanaharymarino@gmail.com</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                <span data-i18n="footer_readme">Voir README_UTILISATEUR.txt</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ── Barre de séparation ── -->
+                <div class="footer-separator" aria-hidden="true">
+                    <span class="footer-sep-dot"></span>
+                    <span class="footer-sep-line"></span>
+                    <span class="footer-sep-diamond">◆</span>
+                    <span class="footer-sep-line"></span>
+                    <span class="footer-sep-dot"></span>
+                </div>
+
+                <!-- ── Bottom Bar ── -->
+                <div class="footer-bottom-bar">
+                    <span class="footer-bottom-copy">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M14.83 14.83a4 4 0 1 1 0-5.66"/></svg>
+                        <span data-i18n="footer_bottom_copy">2026 MARIHAR — Interface &amp; code original par l'auteur</span>
+                    </span>
+                    <span class="footer-bottom-sep" aria-hidden="true">·</span>
+                    <span class="footer-bottom-note" data-i18n="footer_bottom_note">Composants tiers : yt-dlp (Unlicense/GPLv3), FFmpeg (LGPL v2.1+), Flask (BSD-3), Python (PSF)</span>
+                    <span class="footer-bottom-sep" aria-hidden="true">·</span>
+                    <span class="footer-bottom-made">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span data-i18n="footer_bottom_made">Vidéo · Audio · Playlists · Sous-titres</span>
+                    </span>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <!-- Dropdown À propos (en dehors de la navbar pour éviter le clip-path) -->
+    <div class="nav-dropdown" id="aboutDropdown">
+        <a href="#" class="dropdown-item" data-modal="privacy">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <div class="dropdown-item-content">
+                <span class="dropdown-item-title" data-i18n="dropdown_privacy_title">Confidentialité</span>
+                <span class="dropdown-item-desc" data-i18n="dropdown_privacy_desc">Sécurité et données</span>
+            </div>
+        </a>
+        <a href="#" class="dropdown-item" data-modal="contact">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div class="dropdown-item-content">
+                <span class="dropdown-item-title" data-i18n="dropdown_contact_title">Nous contacter</span>
+                <span class="dropdown-item-desc" data-i18n="dropdown_contact_desc">Contacter le développeur</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- History Dropdown (en dehors de tout conteneur pour éviter les stacking contexts) -->
+    <div id="historyDropdown" class="history-dropdown hidden">
+        <div class="history-dropdown-header">
+            <span class="history-dropdown-title" data-i18n="history_title">Historique</span>
+            <div class="history-dropdown-actions">
+                <button id="clearHistoryBtn" class="history-clear-btn" title="Vider l'historique" data-i18n-title="history_clear">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+                </button>
+                <button id="closeHistoryBtn" class="history-close-btn" title="Fermer" data-i18n-title="history_close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="historyList" class="history-list">
+            <!-- History items will be added here -->
+        </div>
+        <div id="historyEmpty" class="history-empty hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span data-i18n="history_empty">Aucun historique</span>
+        </div>
+    </div>
+
+    <!-- Modale applicative (remplace alert / confirmation fermeture) -->
+    <div id="mariharDialogOverlay" class="marihar-dialog-overlay marihar-dialog-closed" aria-hidden="true">
+        <div class="marihar-dialog" role="dialog" aria-modal="true" aria-labelledby="mariharDialogTitle">
+            <div class="marihar-dialog-glow" aria-hidden="true"></div>
+            <div class="marihar-dialog-inner">
+                <div class="marihar-dialog-brand">
+                    <div class="marihar-dialog-icon-wrap">
+                        <img src="{{ url_for('static', filename='Logo_marino.png') }}?v=3" alt="" class="marihar-dialog-logo" width="48" height="48">
+                    </div>
+                    <h2 id="mariharDialogTitle" class="marihar-dialog-title">MARIHAR</h2>
+                </div>
+                <p id="mariharDialogMessage" class="marihar-dialog-message"></p>
+                <div class="marihar-dialog-actions">
+                    <button type="button" id="mariharDialogCancel" class="marihar-dialog-btn marihar-dialog-btn-secondary" data-i18n="dialog_cancel">Annuler</button>
+                    <button type="button" id="mariharDialogConfirm" class="marihar-dialog-btn marihar-dialog-btn-primary" data-i18n="dialog_ok">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/localization.js') }}?v=1"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}?v=10"></script>
+    <script src="{{ url_for('static', filename='js/theme-toggle.js') }}?v=1"></script>
+</body>
+</html>

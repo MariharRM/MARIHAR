@@ -1,0 +1,50 @@
+════════════════════════════════════════════════════════════
+  MARIHAR — Index des licences des logiciels tiers
+════════════════════════════════════════════════════════════
+
+Ce dossier contient les textes complets des licences de tous
+les composants open-source intégrés dans MARIHAR v1.0.0.
+
+────────────────────────────────────────────────────────────
+  Fichier                        Composant(s)       Licence
+────────────────────────────────────────────────────────────
+
+  yt-dlp-LICENSE.txt             yt-dlp             Unlicense
+                                                    (+ GPLv3 si
+                                                     bundlé)
+
+  GPL-3.0.txt                    yt-dlp (bundlé)    GNU GPL v3
+                                 + dépendances GPL
+
+  FFmpeg-LGPL-2.1.txt            ffmpeg.exe         GNU LGPL v2.1+
+                                 ffprobe.exe
+                                 ffplay.exe
+
+  Flask-BSD-3-Clause.txt         Flask              BSD 3-Clause
+                                 Werkzeug
+                                 Jinja2
+                                 MarkupSafe
+                                 Click
+                                 itsdangerous
+
+  Python-PSF-LICENSE.txt         Python             PSF License v2
+
+  Deno-MIT.txt                   deno.exe           MIT
+                                 gdeno.exe
+
+────────────────────────────────────────────────────────────
+  Liens officiels
+────────────────────────────────────────────────────────────
+
+  yt-dlp    : https://github.com/yt-dlp/yt-dlp
+  FFmpeg    : https://ffmpeg.org/
+  Flask     : https://github.com/pallets/flask
+  Werkzeug  : https://github.com/pallets/werkzeug
+  Jinja2    : https://github.com/pallets/jinja
+  Python    : https://www.python.org/
+  Deno      : https://github.com/denoland/deno
+
+════════════════════════════════════════════════════════════
+  MARIHAR — Interface et code original © 2026
+  Les composants tiers restent soumis à leurs licences.
+════════════════════════════════════════════════════════════

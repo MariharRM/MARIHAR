@@ -1,0 +1,317 @@
+/* Marino RAKOTONJANAHARY - rakotonjanaharymarino@gmail.com */
+#formatsSection {
+    background: linear-gradient(
+        145deg,
+        var(--bg-secondary) 0%,
+        var(--bg-card-end) 100%
+    );
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--gold-primary);
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+#formatsSection.collapsed {
+    transform: none;
+}
+
+.formats-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 30px;
+    background: linear-gradient(
+        135deg,
+        rgba(198, 161, 91, 0.1) 0%,
+        transparent 100%
+    );
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+.formats-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 6px 20px rgba(198, 161, 91, 0.4);
+}
+
+.formats-icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.formats-title {
+    flex: 1;
+}
+
+.formats-title h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.formats-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+#formatsContent {
+    padding: 25px 30px;
+}
+
+.format-checkbox-option {
+    background: linear-gradient(135deg, 
+        rgba(198, 161, 91, 0.03) 0%,
+        rgba(212, 175, 55, 0.05) 50%,
+        rgba(184, 134, 11, 0.03) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(198, 161, 91, 0.15);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.format-checkbox-option:hover {
+    border-color: rgba(198, 161, 91, 0.25);
+    box-shadow: 
+        0 6px 24px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.format-checkbox-option .toggle-switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+}
+
+.format-checkbox-option .toggle-switch input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.format-checkbox-option .toggle-slider {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    margin-right: 1rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .format-checkbox-option .toggle-slider {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.format-checkbox-option .toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    top: 3px;
+    left: 3px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.format-checkbox-option .toggle-switch input:checked + .toggle-slider {
+    background: linear-gradient(135deg, 
+        var(--gold-primary) 0%,
+        var(--gold-secondary) 100%);
+    box-shadow: 
+        0 0 0 3px rgba(198, 161, 91, 0.2),
+        inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.format-checkbox-option .toggle-switch input:checked + .toggle-slider::before {
+    transform: translateX(22px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.format-checkbox-option .toggle-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.3px;
+}
+
+.format-checkbox-option .toggle-switch:hover .toggle-label {
+    color: var(--gold-primary);
+}
+
+#formatsContent .column-modern {
+    margin-bottom: 2rem;
+}
+
+#formatsContent .column-modern:last-of-type {
+    margin-bottom: 2rem;
+}
+
+#formatsContent .column-modern .column-header-modern {
+    border-top: 2px solid var(--gold-primary);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.combined-section-modern {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .formats-header {
+        padding: 1.25rem 1.5rem;
+    }
+    
+    .formats-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+    
+    .formats-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .formats-title h3 {
+        font-size: 1.1rem;
+    }
+    
+    .formats-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    #formatsContent {
+        padding: 1.5rem;
+    }
+    
+    .format-checkbox-option {
+        padding: 1rem 1.25rem;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#formatsSection {
+    animation: slideInFromTop 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.history-dropdown:not(.hidden),
+.history-dropdown.draggable {
+    display: block !important;
+    z-index: 2147483647 !important;
+    position: fixed !important;
+}
+
+.history-dropdown,
+#historyDropdown {
+    z-index: 2147483647 !important;
+    position: fixed !important;
+}
+
+.history-dropdown-header {
+    cursor: move !important;
+    cursor: grab !important;
+    user-select: none !important;
+}
+
+.history-dropdown-header:active {
+    cursor: grabbing !important;
+}
+
+.footer,
+footer,
+.footer-modern,
+#footer {
+    z-index: -1 !important;
+    position: relative !important;
+}
+
+.footer *,
+footer *,
+.footer-modern *,
+#footer * {
+    z-index: inherit !important;
+}
+
+.footer::before,
+.footer::after,
+footer::before,
+footer::after {
+    z-index: -1 !important;
+}
+
+.url-section,
+.url-input-container,
+.container,
+body {
+    position: relative !important;
+    z-index: auto !important;
+}
+
+#historyBtn {
+    pointer-events: auto !important;
+    z-index: 10001 !important;
+    position: relative !important;
+}
+
+.url-input-wrapper,
+.url-input-container,
+.url-section {
+    overflow: visible !important;
+}
+
+.input-actions {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.history-dropdown button,
+.history-dropdown .history-close-btn,
+.history-dropdown .history-clear-btn,
+#closeHistoryBtn,
+#clearHistoryBtn {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 2147483647 !important;
+    position: relative !important;
+}
+
+.history-dropdown * {
+    pointer-events: auto !important;
+}
+
+.history-dropdown-header {
+    pointer-events: auto !important;
+}

@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Cache files
+dep_analysis_cache_v2*
+node_analysis_cache_v2*
+
+# User downloads and local test media (never publish)
+downloads/
+*.mp3
+*.mkv
+
+# Binary executables (too large for Git, will be in Releases)
+Binaries/*.exe
+Binaries/*.dll
+
+# Large media files (use LFS or host externally)
+Frontend/static/*.mp4
+Assets/*.mp4
+
+# Installation artefacts
+Installation/build/
+Installation/downloads/
+Installation/installer_output/

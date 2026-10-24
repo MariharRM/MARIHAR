@@ -1,0 +1,445 @@
+{
+  "nav_home_title": "Fandraisana",
+  "nav_about_title": "Momba",
+  "nav_guide_title": "Torolalana",
+  "nav_theme_title": "Hanova endrika",
+  "nav_lang_title": "Hanova fiteny",
+  "nav_ytdlp_title": "Hanova / Famorona ny yt-dlp",
+
+  "mobile_home": "Fandraisana",
+  "mobile_about": "Momba",
+  "mobile_privacy": "Fiainana manokana",
+  "mobile_contact": "Hifandray aminay",
+  "mobile_guide": "Torolalana",
+
+  "subtitle": "Alaivo mora foana ireo horonan-tsary tianao",
+  "url_placeholder": "Lien-n'ny horonan-tsary na fitadiavana amin'ny lohateny...",
+  "search_mode_1": "Ciblé (vokatra 1)",
+  "search_mode_5": "Haingana (vokatra 5)",
+  "search_mode_10": "Mahazatra (vokatra 10)",
+  "search_mode_20": "Miitatra (vokatra 20)",
+  "search_mode_50": "Lehibe (vokatra 50)",
+  "search_mode_100": "Lehibe be (vokatra 100)",
+  "search_mode_200": "Farany (vokatra 200)",
+  "search_mode_custom": "Manokana",
+  "btn_paste": "Apetaho",
+  "btn_clear": "Fafao",
+  "btn_analyze": "MAMAKAFAKA",
+
+  "loading_text": "Eo am-pamakafakana...",
+  "console_title": "Sehatra mpamakafaka yt-dlp",
+  "console_analysis": "Sehatra mpamakafaka",
+  "console_analyzing": "Eo am-pandinihana ireo endrika misy...",
+
+  "playlist_videos_title": "Horonantsary ao amin'ny lisitra",
+  "btn_select_all": "Safidio izy rehetra",
+  "btn_deselect_all": "Esory izy rehetra",
+
+  "modal_select_format": "Safidio ny endrika",
+
+  "tab_combined": "Mitambatra",
+  "tab_video": "Horonan-tsary",
+  "tab_audio": "Feo",
+
+  "th_select": "Safidy",
+  "th_format": "Endrika",
+  "th_resolution": "Haben'ny sary",
+  "th_codec": "Codec",
+  "th_size": "Habe",
+  "th_bitrate": "Bitrate",
+  "th_language": "Fiteny",
+
+  "btn_cancel_modal": "Hanafoana",
+  "btn_confirm": "Hamafiso ny safidy",
+
+  "col_video": "HORONAN-TSARY",
+  "col_video_sub": "Kalitao & Haben’ny sary",
+
+  "col_audio": "FEO",
+  "col_audio_sub": "Fiteny & Lisitra",
+
+  "col_subtitles": "DIKANTENY",
+  "col_subtitles_sub": "Fiteny misy",
+
+  "col_collapse_title": "Ahena / Ampitomboina",
+
+  "subs_original": "Tany am-boalohany",
+  "subs_auto": "Namboarina ho azy",
+  "subs_no_original": "Tsy misy dikanteny tany am-boalohany",
+  "subs_no_auto": "Tsy misy dikanteny namboarina ho azy",
+
+  "separated_title": "Endrika Tsirairay",
+  "formats_title": "Safidio ny Endrika",
+  "formats_sub": "Safidio ny kalitaon'ny horonan-tsary, feo ary dikanteny",
+  "separated_sub": "Safidio ny horonan-tsary sy feo tsirairay avy",
+  "separated_badge": "Tsirairay",
+  "combined_title": "Endrika Mitambatra",
+  "combined_sub": "HLS/DASH - Horonan-tsary + Feo tafiditra",
+  "combined_streaming": "Zorotsary mivantana (Streaming)",
+  "combined_info": "Ny endrika mitambatra dia efa misy feo tafiditra ka mety tsara amin’ny famakiana mivantana.",
+
+  "th_format_id": "ID Endrika",
+  "th_audio_lang": "Fitenin’ny Feo",
+  "th_type": "Karazana",
+  "th_fps": "FPS",
+
+  "advanced_title": "Safidy Fanampiny",
+  "advanced_sub": "Amboary araka izay tianao ny fangalana",
+
+  "cat_subtitles": "Dikanteny",
+
+  "opt_burn_subs": "Ampidiro ao anaty horonan-tsary ny dikanteny",
+
+  "style_badge": "🎨 Fanamboarana",
+
+  "btn_preview": "Hijery mialoha ny fivoakany",
+
+  "label_text_color": "Lokon’ny soratra",
+  "label_outline_color": "Lokon’ny sisiny",
+  "label_font_size": "Haben’ny soratra",
+
+  "optgroup_small": "Kely",
+  "optgroup_medium": "Antonony",
+  "optgroup_large": "Lehibe",
+  "optgroup_xlarge": "Lehibe koakoa",
+
+  "label_position": "Toerana mitsangana",
+
+  "pos_top": "Ambony (20%)",
+  "pos_mid_top": "Ambony afovoany (35%)",
+  "pos_center": "Afovoany (50%)",
+  "pos_mid_bot": "Ambany afovoany (65%)",
+  "pos_bottom": "Ambany (85%)",
+
+  "label_outline_size": "Haben’ny sisiny",
+
+  "outline_thin": "Manify (1px)",
+  "outline_normal": "Antonony (2px)",
+  "outline_thick": "Matevina (3px)",
+  "outline_xthick": "Matevina be (4px)",
+
+  "label_font_style": "Endrikin'ny soratra",
+
+  "style_normal": "Tsotra",
+  "style_bold": "Matevina",
+  "style_italic": "Mitsivalana",
+
+  "opt_write_subs": "Alaivo misaraka ny dikanteny",
+
+  "cat_media": "Media",
+
+  "opt_embed_thumb": "Ampidiro ny sary famantarana",
+  "opt_extract_audio": "Esory ny feo ihany (MP3)",
+
+  "cat_extract": "Ampahany",
+
+  "extract_desc": "Alaivo ny ampahany manokana amin’ilay horonan-tsary",
+
+  "label_start": "Fiandohana",
+  "label_end": "Fiafarana",
+
+  "time_format": "Format: MM:SS (ohatra: 01:30 = 1 minitra sy 30 segondra)",
+
+  "cat_location": "Toerana",
+
+  "location_desc": "Safidio ny lahatahiry hitahirizana ny fangalana",
+
+  "label_output_dir": "Lahatahiry fivoahana",
+
+  "output_placeholder": "Raharaha tany am-boalohany: laha-tahiry Downloads",
+
+  "btn_browse": "Hitety...",
+
+  "btn_download": "MAKA",
+
+  "download_sub": "Atombohy ny fangalana",
+
+  "download_info": "Tsindrio raha hanomboka ny fangalana miaraka amin’ireo safidy voafidy",
+
+  "progress_title": "Eo am-pangalana",
+  "progress_wait": "Andraso azafady...",
+
+  "step_analyze": "Fanadihadiana",
+  "step_download": "Fangalana",
+  "step_finalize": "Famaranana",
+
+  "stat_size": "Habe",
+  "stat_speed": "Hafainganam-pandeha",
+  "stat_eta": "Fotoana sisa",
+
+  "btn_cancel_dl": "Atsaharo ny fangalana",
+  "btn_pause_dl": "Ajanony",
+  "btn_resume_dl": "Hiverina",
+
+  "console_ytdlp": "Sehatra mpamakafaka",
+  "console_inactive": "Tsy miasa",
+
+  "title_copy_logs": "Adikao ny logs",
+  "title_clear_console": "Fafao ny ao anatin'ny sehatra mpamakafaka",
+
+  "downloads_title": "Rakitra azo",
+  "downloads_subtitle": "Tantaran’ireo rakitra azonao",
+  "downloads_count_label": "rakitra",
+
+  "empty_text": "Tsy misy rakitra azo",
+  "empty_hint": "Hiseho eto ireo rakitra azonao",
+
+  "about_title": "Inona no atao hoe MARIHAR ?",
+
+  "about_subtitle": "Fitaovana maoderina sy matanjaka ho an’ny fangalana horonan-tsary",
+
+  "about_mission_title": "Ny Tanjonay",
+
+  "about_mission_text": "Noforonina ny MARIHAR mba hanamora ny fangalana horonan-tsary ho an’ny rehetra, nefa tsy mampihena ny kalitao. Mino izahay fa tokony ho afaka hankafy ny votoaty tianao ianao, na aiza na aiza ary amin’ny fotoana rehetra.",
+
+  "about_tech_title": "Teknolojia Mandroso",
+
+  "about_tech_text": "Miorina amin’ny yt-dlp, iray amin’ireo fitaovana tsara indrindra eran-tany amin’ny fangalana horonan-tsary, MARIHAR dia manolotra 'interface' maoderina sy tsotra, nefa mitazona ny herin'ilay fitaovana 'en ligne de commande' manontolo.",
+
+  "about_security_title": "Fiarovana & Fiainana manokana",
+
+  "about_security_text": "Anjaranao irery ny angon-drakitrao. Miasa eo an-toerana amin’ny solosainao ny MARIHAR ary tsy mandefa vaovao amin’ny serveur ivelany.",
+
+  "about_multilang_title": "Fiteny maro",
+
+  "about_multilang_text": "Afaka maka horonan-tsary amin’ny fiteny maro ianao. MARIHAR dia mahita ho azy ireo piste audio sy dikanteny rehetra misy.",
+
+  "about_features_title": "Endri-javatra lehibe",
+
+  "feat_4k": "Fangalana hatramin’ny 4K",
+  "feat_mp3": "Fanesorana feo MP3 avo kalitao",
+  "feat_subs_multi": "Dikanteny amin'ny fiteny maro",
+  "feat_subs_burn": "Fampidirana dikanteny ao anaty horonan-tsary",
+  "feat_sections": "Fangalana ampahany amin'ny horonan-tsary na feo",
+  "feat_ui": "Sehatra maoderina sy mora ampiasaina",
+
+  "guide_title": "Ahoana ny fampiasana MARIHAR ?",
+
+  "guide_subtitle": "Torolalana tsikelikely hahafehezana ireo endri-javatra rehetra",
+
+  "step1_title": "Rohy na Fitadiavana",
+
+  "step1_text": "Apetaho ny URL-n'ny horonan-tsary iray na manorata lohateny fotsiny hitadiavana azy, tahaka ny fanaovana fitadiavana amin'ny tranonkala. Azonao ampiasaina ny bokotra \"Apetaho\" haka ny URL ao amin'ny fitadidiana.",
+
+  "step1_tip": "<strong>Soso-kevitra :</strong> MARIHAR dia miasa amin'ny rohy, lohateny hira/mpanakanto ary na dia lisitra horonan-tsary amin'ny sehatra maro aza.",
+
+  "step2_title": "Hadihadio ilay horonan-tsary",
+
+  "step2_text": "Tsindrio ny bokotra MAMAKAFAKA mba hahazoana ny mombamomba ilay horonan-tsary. Hojeren’i MARIHAR ho azy :",
+
+
+  "step2_li1": "Ny kalitao rehetra misy (144p ka hatramin’ny 4K)",
+  "step2_li2": "Ireo piste audio rehetra",
+  "step2_li3": "Ireo dikanteny rehetra misy",
+  "step2_li4": "Ireo endrika mitambatra (horonan-tsary + feo)",
+
+  "step3_title": "Safidio ny endrika",
+
+  "step3_text": "Safidio ireo endrika mety aminao :",
+
+
+  "step3_li1": "<strong>Horonan-tsary :</strong> Safidio ny haben'ny sary (720p, 1080p, 4K...)",
+  "step3_li2": "<strong>Feo :</strong> Safidio ny fiteny tianao",
+  "step3_li3": "<strong>Dikanteny :</strong> Safidio ireo fiteny tianao alaina",
+
+  "step3_tip": "<strong>Soso-kevitra :</strong> Ny endrika mitambatra dia atolotra ho an’ny famakiana mivantana tsy misy olana.",
+
+  "step4_title": "Safidy fanampiny (tsy voatery)",
+
+  "step4_text": "Amboary ny fangalana amin’ireo safidy fanampiny :",
+
+
+  "step4_li1": "<strong>Ampidiro ny dikanteny :</strong> Ataovy tafiditra ao anaty horonan-tsary ny dikanteny",
+  "step4_li2": "<strong>Esory ny feo :</strong> Alaivo manokana ny endrika MP3",
+  "step4_li3": "<strong>Ampahany :</strong> Alaivo amin'ny ampahany manokana ilay horonan-tsary",
+
+  "step5_title": "Alaivo",
+
+  "step5_text1": "Tsindrio ny bokotra HAKA ary andraso mandritra ny fangalana. Hiseho amin’ny fotoana tena izy ny fandrosoana.",
+
+  "step5_text2": "Rehefa vita dia ho hita ao amin’ny fizarana Rakitra azo ilay rakitra.",
+
+  "btn_prev": "Teo aloha",
+  "btn_next": "Manaraka",
+  "btn_finish": "Vita",
+
+  "step_counter": "Dingana {n} / {total}",
+
+  "faq_title": "Fanontaniana matetika",
+
+  "faq1_q": "Inona avy ireo sehatra tohanana ?",
+
+  "faq1_a": "MARIHAR dia manohana YouTube, Facebook, Instagram, TikTok, Twitter ary sehatra maro hafa amin’ny alàlan’ny yt-dlp.",
+
+  "faq2_q": "Ara-dalàna ve ny fangalana ?",
+
+  "faq2_a": "Azo atao ny fangalana ho an’ny fampiasana manokana. Hajao hatrany ny zon’ny mpamorona sy ny fepetra ampiasain’ny sehatra.",
+
+  "faq3_q": "Afaka maka lisitra feno (playlist) ve aho ?",
+
+  "faq3_a": "Eny tompoko ! Apetaho fotsiny ny URL an’ilay lisitra dia hofakafakan’i MARIHAR ireo horonan-tsary rehetra ao anatiny.",
+
+  "footer_tagline": "Alaivo malalaka sy amin’ny fomba maoderina ireo horonan-tsary tianao.",
+
+  "footer_features": "ENDRI-JAVATRA",
+
+  "footer_feat1": "Horonan-tsary HD / 4K",
+  "footer_feat2": "Fanesorana feo MP3",
+  "footer_feat3": "Fangalana lisitra (playlists)",
+  "footer_feat4": "Dikanteny tafiditra",
+  "footer_feat5": "Fanaraha-maso mivantana ny fandrosoana",
+
+  "footer_legal": "LALÀNA & FIFANDRAISANA",
+
+  "footer_copy": "© 2026 MARIHAR — Zo rehetra voatokana",
+
+  "footer_ytdlp_lic": "yt-dlp eo ambanin’ny lisansa GPLv3",
+  "footer_ffmpeg_lic": "FFmpeg eo ambanin’ny lisansa LGPL",
+
+  "footer_readme": "Vakio README_UTILISATEUR.txt",
+
+  "footer_bottom_copy": "2026 MARIHAR — Sehatra & kaody novokarin’ny mpamorona",
+
+  "footer_bottom_note": "Singa ivelany : yt-dlp (Unlicense/GPLv3), FFmpeg (LGPL v2.1+), Flask (BSD-3), Python (PSF)",
+
+  "footer_bottom_made": "Horonan-tsary · Feo · Lisitra · Dikanteny",
+
+  "dropdown_privacy_title": "Fiainana manokana",
+  "dropdown_privacy_desc": "Fiarovana sy angona",
+
+  "dropdown_contact_title": "Hifandray aminay",
+  "dropdown_contact_desc": "Hifandray amin’ny mpamorona",
+
+  "dialog_cancel": "Hanafoana",
+  "dialog_ok": "OK",
+
+  "quit_title": "Hiala amin’ny MARIHAR",
+
+  "quit_message": "Tena hiala amin’ny MARIHAR ve ianao ?",
+
+  "btn_quit": "Hiala",
+
+  "alert_enter_url": "Ampidiro aloha azafady ny URL an'ilay horonantsary",
+
+  "alert_copied": "Voadika ao amin'ny presse-papiers ny logs",
+
+  "alert_copy_error": "Nisy hadisoana nandritra ny fanaovana kopia",
+
+  "alert_clipboard_error": "Tsy afaka miditra amin'ny presse-papiers. Apetaho amin'ny tanana azafady.",
+
+  "alert_folder_error": "Tsy afaka manokatra ny mpisafidy lahatahiry",
+
+  "alert_preview_error": "Nisy hadisoana nandritra ny famoronana preview",
+
+  "alert_error_prefix": "Hadisoana",
+  "alert_connection_error": "Tsy afaka mandeha noho ny antony fifandraisana",
+  "alert_analyze_first": "Mamakafaka aloha URL",
+  "alert_select_video": "Misafidiana horonan-tsary iray farafahakeliny",
+  "alert_cancel_error": "Nisy hadisoana nandritra ny fanafoanana",
+  "confirm_cancel_title": "Hamafisana ny fanafoanana",
+  "confirm_cancel_message": "Tianao foana ny hanohana ny fangalana ve?",
+  "confirm_cancel_yes": "Eny, foanana",
+  "confirm_cancel_no": "Tsia, mandeha",
+  "alert_download_complete_title": "Vita ny fangalana",
+  "alert_download_complete": "Vita soa aman-tsara ny fangalana !",
+  "alert_download_cancelled": "Foanana ny fangalana",
+
+
+  "lang_fr": "Français",
+  "lang_en": "English",
+  "lang_it": "Italiano",
+  "lang_mg": "Malagasy",
+
+  "modal_privacy_title": "Fiarovana ny Fiainana Manokana",
+
+  "modal_privacy_data_protection": "Fiarovana ny angon-drakitra",
+
+  "modal_privacy_data_desc": "Manaja ny fiainanao manokana ny MARIHAR. Tsy misy angon-drakitra manokan'ny tsirairay alaina na tehirizina any amin'ireo milina mpampiantrano (serveurs) ivelany",
+
+  "modal_privacy_local_data": "Angon-drakitra karakaraina an-toerana (en local)",
+
+  "modal_privacy_local_1": "✓ URL voafakafaka an-toerana ihany",
+  "modal_privacy_local_2": "✓ Fangalana voatahiry ao amin’ny fitaovanao",
+  "modal_privacy_local_3": "✓ Tsy misy angon-drakitra alefa any amin'ny olon-kafa",
+  "modal_privacy_local_4": "✓ Seho (session) an-toerana ihany",
+
+  "modal_privacy_security": "Fiarovana",
+
+  "modal_privacy_security_1": "Rindrambaiko an-toerana voarindra tsara",
+  "modal_privacy_security_2": "Tsy misy fanaraha-maso (tracking) na famakafakana (analytics)",
+  "modal_privacy_security_3": "Kaody misokatra ho an'ny rehetra (open-source) sy mangarahara",
+
+  "modal_privacy_cookies": "Cookies",
+
+  "modal_privacy_cookies_desc": "Ity rindranasa ity dia tsy mampiasa cookies fanaraha-maso. Session vonjimaika ihany no ampiasaina amin’ny fiasan’ny rindranasa.",
+
+  "modal_privacy_warning": "Zava-dehibe :",
+
+  "modal_privacy_warning_desc": "Hajao ny zon'ny mpamorona sy ny fepetra fampiasana ireo sehatra voatokana. Aza mampiasa ity fitaovana ity raha tsy amin’ny votoaty anananao zo.",
+
+  "modal_contact_title": "Hifandray aminay",
+
+  "modal_contact_dev": "Mpamorona MARIHAR",
+
+  "modal_contact_role": "Mpamorona Full Stack & Tompony",
+
+  "modal_contact_email": "Mailaka",
+
+  "modal_contact_location": "Toerana",
+
+  "modal_contact_message": "Ho an’ny fanontaniana, soso-kevitra na fiaraha-miasa rehetra dia aza misalasala mifandray aminay. Faly izahay hamaly anao !",
+
+  "ytdlp_auto_update_title": "Fanavaozana ho azy",
+  "ytdlp_auto_update_desc": "Manavao an'i yt-dlp (mampiato ny asa hafa)",
+  "ytdlp_custom_title": "Misafidy rakitra yt-dlp manokana",
+  "ytdlp_custom_desc": "Hampiasa ny yt-dlp.exe-nao manokana",
+  "ytdlp_reset_title": "Hamerina amin'ny teo aloha",
+  "ytdlp_reset_desc": "Hampiasa ny dika efa ao anatiny",
+
+  "ytdlp_update_title": "Fanavaozana ny yt-dlp",
+  "ytdlp_update_message": "Eo am-panavaozana an'i yt-dlp...\n\nAzafady miandrasa kely, mety haharitra segondra vitsivitsy izany.",
+  "ytdlp_update_result_title": "Vokatrin'ny fanavaozana ny yt-dlp",
+
+  "ytdlp_pick_title": "Misafidy yt-dlp anao manokana",
+  "ytdlp_pick_message": "Fisafidianana ny rakitra yt-dlp.exe...\n\nAzafady misafidiana rakitra yt-dlp.exe iray.",
+  "ytdlp_pick_opening": "Manokatra ny varavarankely hisafidianana...\n\nAzafady misafidiana rakitra yt-dlp.exe iray.",
+  "ytdlp_pick_error_title": "Diso",
+  "ytdlp_pick_error_path": "Tsy voaray na nofoanana ny lalan'ny rakitra yt-dlp.",
+  "ytdlp_pick_error_short": "Tsy voaray ny lalan'ny rakitra yt-dlp.",
+  "ytdlp_pick_result_title": "Vokatrin'ny fisafidianana yt-dlp",
+  "ytdlp_reset_success": "Naverina amin'ny laoniny ny yt-dlp.",
+  "ytdlp_network_error": "Olana eo amin'ny mpampitohy (réseau): ",
+
+  "ytdlp_page_title": "Fanavaozana & Fikirakirana ny yt-dlp",
+  "ytdlp_page_subtitle": "Kirakirao ny yt-dlp-nao mba ahafahanao maka ireo horonantsary malalaka",
+  "ytdlp_what_title": "Inona moa izany yt-dlp izany ?",
+  "ytdlp_what_desc": "Ny yt-dlp no milina mpisintona horonantsary matanjaka indrindra sy mivoatra indrindra maneran-tany. Izy io no mamela an'i MARIHAR hisintona horonantsary avy ao amin'ny YouTube, TikTok, Instagram, ary sehatra hafa an-jatony.",
+  "ytdlp_why_title": "Nahoana no mila havaozina ?",
+  "ytdlp_why_desc": "Manova ny fomba fiasany sy ny fiarovana azy foana ireo sehatra fizarana horonantsary. Ny fanavaozana matetika an'i yt-dlp no miantoka fa afaka misintona ireo horonantsary tianao foana ianao tsy misy olana.",
+  "ytdlp_custom_page_title": "Dika anao manokana",
+  "ytdlp_custom_page_desc": "Afaka mampiasa ny dika yt-dlp-nao manokana ianao raha tianao. Ilaina izany raha mila fitaovana manokana ianao na raha tianao ny mitantana ny fanavaozana samirery.",
+  "ytdlp_config_title": "Fikirakirana tsotra",
+  "ytdlp_config_desc": "Ny fikirakirana ny yt-dlp dia mamela-nao hanavao, hisafidy dika manokana, na hamerina izany amin'ny dika fototra amin'ny alalan'ny tsindry vitsy monja. Natao ho tsotra sy mora azo ny zava-drehetra.",
+  "ytdlp_steps_title": "Dingana fampiasana azy",
+  "ytdlp_step_1": "Tsindrio ny sary famantarana ny fikirakirana yt-dlp ao amin'ny baran'ny fitetezana",
+  "ytdlp_step_2": "Safidio ny \"Fanavaozana ho azy\" mba hanavaozana ny dika ampiasainao ankehitriny",
+  "ytdlp_step_3": "Safidio ny \"Misafidy rakitra yt-dlp manokana\" mba hampiasana ny dika anao manokana",
+  "ytdlp_step_4": "Safidio ny \"Hamerina amin'ny teo aloha\" mba hiverenana amin'ny dika efa ao anatiny",
+  "ytdlp_tips_title": "Ny tsara ho fantatra",
+  "ytdlp_tip_1": "Havaozy matetika ny yt-dlp mba hisorohana ny olana eo amin'ny fisintonana horonantsary",
+  "ytdlp_tip_2": "Mampiato ny asa hafa ny fanavaozana ho azy, andraso ho tapitra izany",
+  "ytdlp_tip_3": "Ampiasao ny dika efa ao anatiny raha tsy mila fitaovana manokana ianao",
+  "ytdlp_tip_4": "Ny dika an-tsoratrin'ny fizotran'ny fanavaozana (logs) dia miseho ao amin'ny fenêtre de console",
+
+  "ignore_format_selection": "Aza misafidy ny endrika (ampidiro ny dikanteny fotsiny)",
+  "select_subtitle_to_embed": "Safidio ny dikanteny hampidirina",
+  "multiple_subtitles_selected": "Misafidy dikanteny maro ianao. Safidio iray tianao ampidirina ao anatin'ny horonan-tsary.",
+  "cancel": "Hanafoana",
+
+  "history_title": "Tantara",
+  "history_empty": "Tsy misy tantara",
+  "history_clear": "Fafao ny tantara",
+  "history_delete": "Fafao",
+  "history_close": "Sokafy"
+
+}
