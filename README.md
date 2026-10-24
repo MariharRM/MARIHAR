@@ -1,3 +1,7 @@
+
+
+
+
 # MARIHAR - Video Downloader
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -8,12 +12,7 @@ MARIHAR is a powerful video downloader application built with Python, Flask, and
 
 ## Demo Video
 
-A demonstration video of MARIHAR's interface is available in the project assets.
-
-**To view the demo video:**
-- The video file is located at `Assets`
-- Download or clone the repository to access the video locally
-
+https://github.com/user-attachments/assets/2abde8f5-9a2e-4cd2-8a23-91c89cfdb6d4
 
 ## Platform Support
 
@@ -245,3 +244,5 @@ For issues, questions, or contributions, please open an issue on [GitHub](https:
 ---
 
 **Note**: This is an open-source project. If you find it useful, consider giving it a star on GitHub!
+
+
