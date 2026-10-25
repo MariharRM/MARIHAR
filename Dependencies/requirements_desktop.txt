@@ -1,5 +1,5 @@
 # Marino RAKOTONJANAHARY - rakotonjanaharymarino@gmail.com
-pywebview>=4.4
+pywebview==5.3.2
 flask>=3.0
 flask-cors>=4.0
 pyinstaller>=6.0
