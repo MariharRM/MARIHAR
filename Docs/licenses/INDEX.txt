@@ -27,6 +27,10 @@ les composants open-source intégrés dans MARIHAR v1.0.0.
                                  Click
                                  itsdangerous
 
+  flask-cors-MIT.txt             flask-cors         MIT
+
+  pywebview-BSD-3-Clause.txt     pywebview          BSD 3-Clause
+
   Python-PSF-LICENSE.txt         Python             PSF License v2
 
   Deno-MIT.txt                   deno.exe           MIT
@@ -38,9 +42,11 @@ les composants open-source intégrés dans MARIHAR v1.0.0.
   yt-dlp    : https://github.com/yt-dlp/yt-dlp
   FFmpeg    : https://ffmpeg.org/
   Flask     : https://github.com/pallets/flask
+  flask-cors: https://github.com/corydolphin/flask-cors
   Werkzeug  : https://github.com/pallets/werkzeug
   Jinja2    : https://github.com/pallets/jinja
   Python    : https://www.python.org/
+  pywebview : https://github.com/pywebview/pywebview
   Deno      : https://github.com/denoland/deno
 
 ════════════════════════════════════════════════════════════
