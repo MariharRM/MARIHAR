@@ -131,10 +131,11 @@ python Backend/desktop_app.py
 ## Usage
 
 1. Open the web interface at `http://localhost:5000`
-2. Paste a video URL in the input field
-3. Click "Analyze" to fetch video information
-4. Select your preferred format and options
-5. Click "Download" to start the download
+2. Paste a video URL **or** type a video title in the input field
+3. When searching by title, choose a search mode (number of YouTube results) and pick the video you want from the results list
+4. Click "Analyze" to fetch video information
+5. Select your preferred format and options
+6. Click "Download" to start the download
 
 ## Configuration
 
@@ -177,6 +178,8 @@ The language is automatically detected from your browser settings, but you can m
 ### Windows Desktop Application
 
 To build a standalone Windows executable:
+
+> **Note**: `build_desktop.bat` requires **Python 3.12** (it looks for `C:\Python312\python.exe` or `%LocalAppData%\Programs\Python\Python312\python.exe`), even though the web application itself runs on Python 3.8+.
 
 1. **Download required binaries** (yt-dlp, FFmpeg, Deno) to the `Binaries/` folder - see [Binaries/README.md](Binaries/README.md)
 

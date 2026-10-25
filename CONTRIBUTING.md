@@ -58,9 +58,9 @@ See `Binaries/README.md` for detailed download instructions.
 ### Development Setup
 
 1. Fork the repository
-2. Clone your fork:
+2. Clone your fork (replace `<your-username>` with your GitHub username):
    ```bash
-   git clone https://github.com/MariharRM/MARIHAR.git
+   git clone https://github.com/<your-username>/MARIHAR.git
    cd MARIHAR
    ```
 
@@ -94,6 +94,8 @@ See `Binaries/README.md` for detailed download instructions.
 
 The application will be available at `http://localhost:5000`
 
+> **Note**: The web application runs on Python 3.8+. However, building the desktop executable with `Installation/build_desktop.bat` requires **Python 3.12** installed at a known location (see the script).
+
 ## Project Structure
 
 ```
@@ -114,7 +116,7 @@ MARIHAR/
 │   └── templates/      # HTML templates
 │       └── index.html # Main application interface
 ├── Dependencies/       # Python requirements
-│   ├── requirements.txt # Core dependencies (flask, flask-cors, yt-dlp, psutil)
+│   ├── requirements.txt # Core dependencies (flask, flask-cors, yt-dlp)
 │   └── requirements_desktop.txt # Desktop app dependencies (pywebview, pyinstaller)
 ├── Installation/       # Build and installation scripts
 │   ├── build_desktop.bat # PyInstaller build script (Windows)
@@ -367,7 +369,7 @@ Binaries/deno.exe --version
 
 1. **Start**: Create an issue for the feature or bug you want to work on
 2. **Discuss**: Get feedback from maintainers before starting large changes
-3. **Branch**: Create a feature branch from the main branch
+3. **Branch**: Create a feature branch from the repository's default branch
 4. **Develop**: Make your changes with small, focused commits
 5. **Test**: Test thoroughly on your local environment
 6. **Document**: Update relevant documentation
