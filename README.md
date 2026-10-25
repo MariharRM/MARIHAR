@@ -64,6 +64,14 @@ MARIHAR/
 └── .env.example       # Environment configuration template
 ```
 
+> **Note for developers**: the animated intro in the web interface uses three video files that are **not tracked in Git** (excluded by `.gitignore` to keep the repository light). They are referenced in `Frontend/templates/index.html` and must be placed in `Frontend/static/` with **exactly** these names, otherwise the animations will not play:
+>
+> - `Frontend/static/Left.mp4`
+> - `Frontend/static/marihar_title.mp4`
+> - `Frontend/static/Right.mp4`
+>
+> (`Logo_marino.png` and `Background_mandala.jpg` are already included in the repository and require no manual action.)
+
 ## Quick Start
 
 ### Option 1: Windows Installer (Recommended for Windows Users)
