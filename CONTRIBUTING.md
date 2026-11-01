@@ -137,6 +137,7 @@ MARIHAR/
 │   ├── ffmpeg.exe, ffplay.exe, ffprobe.exe # Multimedia tools (download from ffmpeg.org)
 │   ├── deno.exe # JavaScript runtime (download from deno.land)
 │   └── README.md # Download instructions
+├── CHANGELOG.md     # Project changelog
 ├── CONTRIBUTING.md    # This file - contribution guidelines
 ├── LICENSE.md         # GPL v3.0 license
 ├── MARIHAR.spec       # PyInstaller build specification

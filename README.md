@@ -160,7 +160,8 @@ MARIHAR/
 │   ├── ffmpeg.exe, ffplay.exe, ffprobe.exe # Multimedia tools (download from ffmpeg.org)
 │   ├── deno.exe # JavaScript runtime (download from deno.land)
 │   └── README.md # Download instructions
-├── CONTRIBUTING.md    # Contribution guidelines
+├── CHANGELOG.md       # Project changelog
+├── CONTRIBUTING.md     # Contribution guidelines
 ├── LICENSE.md         # GPL v3.0 license
 ├── MARIHAR.spec       # PyInstaller build specification
 ├── README.md          # This file - Project README
@@ -379,7 +380,7 @@ MARIHAR is an evolving open-source project. The following roadmap outlines plann
 
 ### Community & Contributions
 
-- [ ] Introduce a project changelog
+- [x] Introduce a project changelog
 - [x] Add GitHub issue and pull request templates
 - [ ] Improve contribution guidelines and documentation
 
