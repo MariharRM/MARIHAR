@@ -380,7 +380,7 @@ MARIHAR is an evolving open-source project. The following roadmap outlines plann
 ### Community & Contributions
 
 - [ ] Introduce a project changelog
-- [ ] Add GitHub issue and pull request templates
+- [x] Add GitHub issue and pull request templates
 - [ ] Improve contribution guidelines and documentation
 
 ## Support
