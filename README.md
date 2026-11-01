@@ -8,7 +8,15 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.0-green)](https://flask.palletsprojects.com/)
 
-MARIHAR is a powerful video downloader application built with Python, Flask, and yt-dlp. It provides both a web interface and a desktop application for downloading videos from various platforms including YouTube, Facebook, Instagram, TikTok, and more.
+**A local, ad-free, open-source video downloader designed to give you greater control over your downloads.**
+
+MARIHAR is a feature-rich video downloading application built with Python, Flask, yt-dlp, and FFmpeg. It combines a modern web interface with a Windows desktop application, allowing users to search for videos by title or URL and download media from YouTube, Facebook, Instagram, TikTok, and hundreds of other supported platforms.
+
+Unlike online downloader websites, MARIHAR runs locally on your computer, without third-party advertisements or intrusive pop-ups. It gives users greater control over their downloads through flexible video and audio format selection, multiple audio track selection when available, and advanced subtitle integration with customizable appearance options.
+
+From choosing the preferred audio language and subtitle presentation to downloading playlists or specific video sections, MARIHAR aims to provide a cleaner, more flexible, and user-controlled downloading experience.
+
+**Built for users who want more control, fewer distractions, and a better way to manage their media downloads.**
 
 ## Why MARIHAR?
 
