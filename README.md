@@ -10,6 +10,30 @@
 
 MARIHAR is a powerful video downloader application built with Python, Flask, and yt-dlp. It provides both a web interface and a desktop application for downloading videos from various platforms including YouTube, Facebook, Instagram, TikTok, and more.
 
+## Why MARIHAR?
+
+### The Story Behind the Project
+
+MARIHAR was created to provide a more comfortable, flexible, and user-controlled video downloading experience.
+
+Many online video downloader websites offer quick and convenient downloads, but they often come with intrusive advertisements, unnecessary pop-ups, and sometimes inappropriate advertising content. Beyond the advertising problem, they may also limit the user's control over certain video options.
+
+One of the main reasons behind MARIHAR is the difficulty of selecting the preferred audio language when a video contains multiple audio tracks.
+
+For example, a YouTube video may originally be in Russian but also include an automatically generated French audio track. Some online downloaders do not make it easy to select the desired audio track, which can result in downloading the video with its original Russian audio instead of the French version.
+
+**MARIHAR aims to solve this problem by giving users greater control over available video and audio formats, including audio track selection when supported by the source and yt-dlp.**
+
+### What Makes MARIHAR Different?
+
+- **Ad-free experience:** No third-party advertisements or intrusive pop-ups within the application.
+- **Local application:** Runs on your own computer instead of relying on an online downloader website.
+- **Audio track selection:** Choose your preferred audio language when multiple audio tracks are available and accessible.
+- **Greater control:** Select video quality, audio formats, subtitles, and other available download options.
+- **Open source:** Freely available under the GNU GPL v3.0 license, allowing the community to inspect, use, improve, and contribute to the project.
+
+**MARIHAR is more than a video downloader. It is an attempt to make video downloading cleaner, more flexible, and more respectful of the user's choices.**
+
 ## Demo Video
 
 https://github.com/user-attachments/assets/2abde8f5-9a2e-4cd2-8a23-91c89cfdb6d4
