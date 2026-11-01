@@ -42,9 +42,61 @@ For example, a YouTube video may originally be in Russian but also include an au
 
 **MARIHAR is more than a video downloader. It is an attempt to make video downloading cleaner, more flexible, and more respectful of the user's choices.**
 
-## Demo Video
+## Screenshots & Application Overview
 
-https://github.com/user-attachments/assets/2abde8f5-9a2e-4cd2-8a23-91c89cfdb6d4
+### 1. Application Startup
+
+The splash screen introduces MARIHAR while the embedded local server initializes in the background. It presents the project logo and an animated title sequence, then offers a single **Accéder à MARIHAR** button that opens the main interface as soon as the backend is ready — so users never land on a half-loaded application.
+
+![MARIHAR splash screen showing the logo, animated title, and access button](Docs/screenshots/application-startup.png)
+
+### 2. Main Download Interface
+
+The home screen is where every download begins. Paste a video or playlist URL — or simply type a title to search for content, with a dropdown to choose how many results to scan. Quick-action buttons (**Coller** to read the clipboard, **Historique** to reuse a recent link) lead into the **Analyser** call-to-action, while the *Fichiers téléchargés* panel keeps track of everything already saved on the machine. Both themes are available:
+
+| Dark Mode | Light Mode |
+| :---: | :---: |
+| ![Main download interface in dark mode: URL/title input, analyze button, and downloaded-files panel](Docs/screenshots/main-download-interface-dark.png) | ![Main download interface in light mode: same layout with a bright color scheme](Docs/screenshots/main-download-interface-light.png) |
+
+### 3. Download Management
+
+Once a link is analyzed, the dashboard gathers every decision in one scrollable page: a video information card (thumbnail, title, channel, views, duration), selectable **video**, **audio**, and **combined** format tables showing codec, resolution, FPS, and estimated file size, a subtitle language picker, and advanced options such as subtitle embedding style, thumbnail/metadata inclusion, section extraction, output folder, and file naming.
+
+![Download dashboard with format selection tables, subtitle options, and advanced settings](Docs/screenshots/download-dashboard.png)
+
+While a job runs, the progress panel keeps you informed at a glance: an animated bar with **Analyse → Téléchargement → Finalisation** stages, live size, speed, and remaining-time cards, **pause** and **cancel** controls, and a raw yt-dlp console for troubleshooting.
+
+![Active download card with progress bar, speed and ETA statistics, pause and cancel buttons, and the yt-dlp console](Docs/screenshots/download-progress-bar.png)
+
+### 4. User Guide
+
+MARIHAR ships an integrated, navigable tutorial ("Comment utiliser MARIHAR?"): five steps with progress indicators, practical tips on each screen, and a FAQ covering supported sites, legality, and playlist downloads. Beginners can learn the whole workflow without leaving the application or opening an external document.
+
+| Dark Mode | Light Mode |
+| :---: | :---: |
+| ![Built-in user guide showing step 1 of 5 and the FAQ section in dark mode](Docs/screenshots/user-guide-dark.png) | ![Built-in user guide showing the same tutorial in light mode](Docs/screenshots/user-guide-light.png) |
+
+### 5. Update Manager
+
+Because video platforms constantly change their protections, yt-dlp must stay current for downloads to keep working. The dedicated "Mise à jour & Configuration yt-dlp" page explains this and provides three actions from the navbar menu: a one-click **automatic update** of the bundled yt-dlp, selecting a **custom `yt-dlp.exe`** file, or **resetting to the default** version. The page also walks through the usage steps and gives practical advice.
+
+| Dark Mode | Light Mode |
+| :---: | :---: |
+| ![yt-dlp update and configuration page in dark mode, with the settings menu open](Docs/screenshots/update-manager-dark.png) | ![yt-dlp update and configuration page in light mode](Docs/screenshots/update-manager-light.png) |
+
+### 6. About MARIHAR
+
+The "Qu'est-ce que MARIHAR?" page presents the project itself: its mission, its yt-dlp-based technology, its privacy promise (everything runs locally, no data is sent to external servers), its multilingual support, and a checklist of key features — 4K video downloads, high-quality MP3 extraction, multilingual and embedded subtitles, section downloads, and a modern interface. The application version is shown alongside the yt-dlp and FFmpeg badges in the footer.
+
+| Dark Mode | Light Mode |
+| :---: | :---: |
+| ![About page in dark mode with mission, technology, privacy, and key-features cards](Docs/screenshots/about-screen-dark.png) | ![About page in light mode with the same project information](Docs/screenshots/about-screen-light.png) |
+
+### 7. Application Demo Video
+
+For a complete visual walkthrough, the demonstration video below shows MARIHAR in action: discovering the interface, searching for content, selecting formats, configuring options, and running downloads from start to finish. It is the quickest way for visitors to understand the general workflow before installing the application.
+
+**▶ [Watch the MARIHAR demonstration video](https://github.com/user-attachments/assets/2abde8f5-9a2e-4cd2-8a23-91c89cfdb6d4)**
 
 ## Platform Support
 
