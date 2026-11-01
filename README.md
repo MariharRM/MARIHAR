@@ -42,6 +42,7 @@ For example, a YouTube video may originally be in Russian but also include an au
 
 **MARIHAR is more than a video downloader. It is an attempt to make video downloading cleaner, more flexible, and more respectful of the user's choices.**
 
+
 ## Screenshots & Application Overview
 
 ### 1. Application Startup
@@ -109,7 +110,7 @@ For a complete visual walkthrough, the demonstration video below shows MARIHAR i
 - **Multi-platform support**: Download videos from YouTube, Facebook, Instagram, TikTok, and other platforms
 - **Search by title or URL**: Find videos by entering a video title or download directly by pasting a video link
 - **Format selection**: Choose from multiple video and audio formats
-- **Advanced subtitle integration and customization**: Download subtitles in your preferred language, embed them directly into the video, and customize their appearance, including available text styling options.
+- **Subtitle support**: Download and embed subtitles in multiple languages
 - **Dark/Light mode**: Modern UI with theme switching
 - **Multi-language support**: Available in English, French, Italian, and Malagasy
 - **Desktop application**: Native desktop app using PyWebView
@@ -140,12 +141,17 @@ MARIHAR/
 │   └── requirements_desktop.txt
 ├── Installation/       # Build and installation scripts
 ├── Docs/              # Documentation
-│   └── licenses/      # Dependency licenses
+│   ├── licenses/      # Third-party license files
+│   └── screenshots/   # Application screenshots (README gallery)
 ├── Assets/            # Desktop app assets (icons, logos)
 ├── Binaries/          # External executables (ffmpeg, yt-dlp, deno)
 ├── CONTRIBUTING.md     # Contribution guidelines
 ├── LICENSE.md         # GPL v3.0 license
-└── .env.example       # Environment configuration template
+├── MARIHAR.spec       # PyInstaller build specification
+├── README.md          # Project README
+├── .env.example       # Environment configuration template
+├── .gitattributes     # Git line-ending rules
+└── .gitignore         # Ignored files (binaries, videos, venv, ...)
 ```
 
 > **Note for developers**: the animated intro in the web interface uses three video files that are **not tracked in Git** (excluded by `.gitignore` to keep the repository light). They are referenced in `Frontend/templates/index.html` and must be placed in `Frontend/static/` with **exactly** these names, otherwise the animations will not play:

@@ -105,14 +105,15 @@ MARIHAR/
 │   ├── desktop_app.py  # PyWebView desktop app
 │   ├── desktop_app_browser.py # Browser-based desktop app
 │   ├── splash_screen.py # Splash screen for desktop app
-│   ├── ytdlp_service.py # yt-dlp service wrapper
-│   └── ytdlp_wrapper.py # yt-dlp interface
+│   ├── ytdlp_service.py # yt-dlp service
+│   └── ytdlp_wrapper.py # yt-dlp wrapper
 ├── Frontend/            # Web interface
 │   ├── static/         # CSS, JS, images, videos
 │   │   ├── css/        # Stylesheets
 │   │   ├── js/         # JavaScript files
 │   │   ├── translations/ # i18n JSON files (en, fr, it, mg)
-│   │   └── *.mp4, *.jpg # Background and video assets
+│   │   ├── Logo_marino.png, Background_mandala.jpg # UI assets (tracked)
+│   │   └── *.mp4 # Intro videos (not tracked, see README note)
 │   └── templates/      # HTML templates
 │       └── index.html # Main application interface
 ├── Dependencies/       # Python requirements
@@ -124,20 +125,25 @@ MARIHAR/
 │   └── start_server.bat # Quick server start script
 ├── Docs/              # Documentation
 │   ├── README_UTILISATEUR.txt # User documentation (French)
-│   ├── LICENSE.txt # License terms
-│   └── licenses/ # Third-party license files
+│   ├── Plateformes_supportées.txt # Supported platforms list (yt-dlp)
+│   ├── LICENSE.txt # End-user terms of service (French)
+│   ├── licenses/ # Third-party license files
+│   └── screenshots/ # Application screenshots (README gallery)
 ├── Assets/            # Desktop app assets
 │   ├── Logo_marino.ico # Desktop app icon
 │   └── Logo_marino.png # Desktop app logo
 ├── Binaries/          # External executables (Windows) - not in Git, see Binaries/README.md
 │   ├── yt-dlp.exe # Video downloader (download from releases)
 │   ├── ffmpeg.exe, ffplay.exe, ffprobe.exe # Multimedia tools (download from ffmpeg.org)
-│   └── deno.exe # JavaScript runtime (download from deno.land)
+│   ├── deno.exe # JavaScript runtime (download from deno.land)
 │   └── README.md # Download instructions
 ├── CONTRIBUTING.md    # This file - contribution guidelines
 ├── LICENSE.md         # GPL v3.0 license
+├── MARIHAR.spec       # PyInstaller build specification
 ├── README.md          # Project README
-└── .env.example       # Environment configuration template
+├── .env.example       # Environment configuration template
+├── .gitattributes     # Git line-ending rules
+└── .gitignore         # Ignored files (binaries, videos, venv, ...)
 ```
 
 ## Contributing Guidelines
