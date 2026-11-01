@@ -1,0 +1,66 @@
+name: Feature Request
+description: Suggest a new feature or capability for MARIHAR.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement to MARIHAR! Please make sure your idea has not already been proposed.
+  - type: checkboxes
+    id: pre-checks
+    attributes:
+      label: Before opening a feature request
+      options:
+        - label: I have checked [existing feature requests](https://github.com/MariharRM/MARIHAR/issues?q=is%3Aissue+label%3Aenhancement) and this idea has not already been proposed.
+          required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature category
+      description: Which area of MARIHAR does this feature relate to?
+      options:
+        - Video Downloading
+        - Audio Track Selection
+        - Subtitle Management
+        - Language & Translation
+        - Playlist Management
+        - User Interface
+        - Download Management
+        - Platform Support
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: related-problem
+    attributes:
+      label: Problem or limitation
+      description: Is your feature request related to a problem or a limitation you are experiencing? Please describe it.
+      placeholder: I'm always frustrated when ...
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Description of the proposed feature
+      description: Describe the feature or capability you would like to see, clearly and concisely.
+      placeholder: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: How should the feature behave from the user's point of view? Describe the ideal workflow and results.
+      placeholder: Describe the ideal workflow and the expected result step by step.
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context or examples
+      description: Add any other context, mockups, links, or examples about the feature request here. This field is optional.
+      placeholder: Links to similar features, screenshots, or examples are welcome.
+    validations:
+      required: false

@@ -1,0 +1,13 @@
+# Configuration for GitHub Issue Forms — MARIHAR
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+
+blank_issues_enabled: true
+
+# No external contact links are configured: MARIHAR has no verified
+# discussion channel (Discussions, chat, or support email) to point to yet.
+# The default "New issue" page offers the three issue forms above plus a
+# blank issue (pre-filled with .github/ISSUE_TEMPLATE.md).
+#
+# Security vulnerabilities must NOT be reported through public issues.
+# Enable GitHub private vulnerability reporting in the repository settings:
+# Settings > Security > "Report a vulnerability".

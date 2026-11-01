@@ -1,0 +1,88 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in MARIHAR.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! The more details you provide, the faster we can investigate.
+  - type: checkboxes
+    id: pre-checks
+    attributes:
+      label: Before opening a bug report
+      options:
+        - label: I have searched [existing issues](https://github.com/MariharRM/MARIHAR/issues) and did not find a similar bug report.
+          required: true
+        - label: I am using the latest available release of MARIHAR and the latest supported version of yt-dlp.
+          required: true
+  - type: input
+    id: marihar-version
+    attributes:
+      label: MARIHAR version
+      description: Which version of MARIHAR are you using (e.g., v1.0.0)?
+      placeholder: "v1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      description: Which Windows version are you using (e.g., Windows 10 22H2, Windows 11 23H2)?
+      placeholder: "Windows 10 22H2"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Describe the bug clearly and concisely.
+      placeholder: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Tell us how to reproduce the behavior, step by step.
+      placeholder: |
+        1. Open MARIHAR
+        2. Enter a URL or search term
+        3. Click on ...
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: What actually happened instead?
+      placeholder: A clear and concise description of what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages or logs
+      description: Paste relevant error messages or log output from the application's console. Avoid sharing private URLs or sensitive information. Do not include passwords, tokens, or other credentials.
+      render: text
+      placeholder: Copy the error output here; it will be formatted as plain text.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Screenshots and additional context
+      description: Add screenshots (drag & drop is supported) or any other context about the problem here. This field is optional.
+      placeholder: Drag & drop screenshots or write additional information here.
+    validations:
+      required: false

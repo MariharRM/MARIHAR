@@ -1,0 +1,58 @@
+name: Question
+description: Ask for help with MARIHAR installation, configuration, or usage.
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No question is too small! Please provide enough detail so we can help you effectively.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question category
+      description: What is your question about?
+      options:
+        - Installation
+        - Configuration
+        - Video Downloading
+        - Audio Track Selection
+        - Subtitle Management
+        - Playlist Downloading
+        - yt-dlp Update
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: marihar-version
+    attributes:
+      label: MARIHAR version
+      description: Which version of MARIHAR are you using (e.g., v1.0.0)?
+      placeholder: "v1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or difficulty encountered
+      description: Describe your question or the difficulty you are facing, clearly and concisely. Do not include passwords, tokens, or other credentials.
+      placeholder: State your question or describe where you are blocked.
+    validations:
+      required: true
+  - type: textarea
+    id: attempted-steps
+    attributes:
+      label: Steps already attempted
+      description: What have you already tried? This helps us avoid repeating solutions you have already tested.
+      placeholder: I already tried ...
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context, screenshots, or relevant details here. This field is optional.
+      placeholder: Anything else that might help us understand your situation.
+    validations:
+      required: false
