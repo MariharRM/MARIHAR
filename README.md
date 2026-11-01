@@ -124,35 +124,51 @@ For a complete visual walkthrough, the demonstration video below shows MARIHAR i
 ```
 MARIHAR/
 ├── Backend/              # Python Flask application
-│   ├── app.py           # Main Flask application
-│   ├── desktop_app.py   # PyWebView desktop app
+│   ├── app.py          # Main Flask application
+│   ├── desktop_app.py  # PyWebView desktop app
 │   ├── desktop_app_browser.py # Browser-based desktop app
-│   ├── splash_screen.py # Splash screen
+│   ├── splash_screen.py # Splash screen for desktop app
 │   ├── ytdlp_service.py # yt-dlp service
 │   └── ytdlp_wrapper.py # yt-dlp wrapper
 ├── Frontend/            # Web interface
-│   ├── static/         # Static assets (CSS, JS, images, videos)
+│   ├── static/         # CSS, JS, images, videos
 │   │   ├── css/        # Stylesheets
 │   │   ├── js/         # JavaScript files
-│   │   └── translations/ # i18n JSON files (en, fr, it, mg)
+│   │   ├── translations/ # i18n JSON files (en, fr, it, mg)
+│   │   ├── Logo_marino.png, Background_mandala.jpg # UI assets (tracked)
+│   │   └── *.mp4 # Intro videos (not tracked, see README note)
 │   └── templates/      # HTML templates
+│       └── index.html # Main application interface
 ├── Dependencies/       # Python requirements
-│   ├── requirements.txt
-│   └── requirements_desktop.txt
+│   ├── requirements.txt # Core dependencies (flask, flask-cors, yt-dlp)
+│   └── requirements_desktop.txt # Desktop app dependencies (pywebview, pyinstaller)
 ├── Installation/       # Build and installation scripts
+│   ├── build_desktop.bat # PyInstaller build script (Windows)
+│   ├── marihar_installer.iss # Inno Setup installer script
+│   └── start_server.bat # Quick server start script
 ├── Docs/              # Documentation
-│   ├── licenses/      # Third-party license files
-│   └── screenshots/   # Application screenshots (README gallery)
-├── Assets/            # Desktop app assets (icons, logos)
-├── Binaries/          # External executables (ffmpeg, yt-dlp, deno)
-├── CONTRIBUTING.md     # Contribution guidelines
+│   ├── README_UTILISATEUR.txt # User documentation (French)
+│   ├── Plateformes_supportées.txt # Supported platforms list (yt-dlp)
+│   ├── LICENSE.txt # End-user terms of service (French)
+│   ├── licenses/ # Third-party license files
+│   └── screenshots/ # Application screenshots (README gallery)
+├── Assets/            # Desktop app assets
+│   ├── Logo_marino.ico # Desktop app icon
+│   └── Logo_marino.png # Desktop app logo
+├── Binaries/          # External executables (Windows) - not in Git, see Binaries/README.md
+│   ├── yt-dlp.exe # Video downloader (download from releases)
+│   ├── ffmpeg.exe, ffplay.exe, ffprobe.exe # Multimedia tools (download from ffmpeg.org)
+│   ├── deno.exe # JavaScript runtime (download from deno.land)
+│   └── README.md # Download instructions
+├── CONTRIBUTING.md    # Contribution guidelines
 ├── LICENSE.md         # GPL v3.0 license
 ├── MARIHAR.spec       # PyInstaller build specification
-├── README.md          # Project README
+├── README.md          # This file - Project README
 ├── .env.example       # Environment configuration template
 ├── .gitattributes     # Git line-ending rules
 └── .gitignore         # Ignored files (binaries, videos, venv, ...)
 ```
+
 
 > **Note for developers**: the animated intro in the web interface uses three video files that are **not tracked in Git** (excluded by `.gitignore` to keep the repository light). They are referenced in `Frontend/templates/index.html` and must be placed in `Frontend/static/` with **exactly** these names, otherwise the animations will not play:
 >
