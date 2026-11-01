@@ -347,13 +347,41 @@ For developer documentation, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Roadmap
 
-- [ ] Add automated test suite
-- [ ] Add Linux support
-- [ ] Add macOS support
+MARIHAR is an evolving open-source project. The following roadmap outlines planned improvements and future development goals. Priorities may change as the project evolves and community feedback is received.
+
+### Security & Reliability
+
+- [ ] Strengthen local API security, including restricting file access to the downloads directory and configuring CORS for trusted localhost origins
+- [ ] Review the use of `--no-check-certificate` in yt-dlp calls and limit it to a documented opt-in workaround
+- [ ] Replace debugging `print()` statements with structured Python logging, respecting the `LOG_LEVEL` environment variable
+- [ ] Implement or properly document the configuration variables defined in `.env.example` (`FLASK_PORT`, `DOWNLOADS_DIR`, etc.)
+- [ ] Introduce automated tests with `pytest` for the core download service
+- [ ] Set up GitHub Actions for automated testing and Windows build verification
+
+### User Experience & Download Management
+
+- [ ] Improve the user interface (visual polish, responsiveness, and accessibility)
 - [ ] Improve error handling and user feedback
-- [ ] Add more language translations
-- [ ] Add download queue management
-- [ ] Add concurrent download support
+- [ ] Introduce download queue management (ordering, configurable concurrency limit, pending status)
+- [ ] Implement automatic port fallback when the default port is unavailable
+- [ ] Complete the Malagasy translation and consider adding more languages
+
+### Architecture & Maintainability
+
+- [ ] Refactor large modules such as `ytdlp_service.py` and `app.js` into smaller, more maintainable components
+- [ ] Implement periodic cleanup of outdated download tasks and analysis caches
+- [ ] Remove hardcoded Python paths from `build_desktop.bat`
+
+### Cross-Platform Support
+
+- [ ] Develop and test Linux compatibility
+- [ ] Develop and test macOS compatibility
+
+### Community & Contributions
+
+- [ ] Introduce a project changelog
+- [ ] Add GitHub issue and pull request templates
+- [ ] Improve contribution guidelines and documentation
 
 ## Support
 
