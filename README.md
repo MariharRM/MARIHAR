@@ -49,7 +49,7 @@ https://github.com/user-attachments/assets/2abde8f5-9a2e-4cd2-8a23-91c89cfdb6d4
 - **Multi-platform support**: Download videos from YouTube, Facebook, Instagram, TikTok, and other platforms
 - **Search by title or URL**: Find videos by entering a video title or download directly by pasting a video link
 - **Format selection**: Choose from multiple video and audio formats
-- **Subtitle support**: Download and embed subtitles in multiple languages
+- **Advanced subtitle integration and customization**: Download subtitles in your preferred language, embed them directly into the video, and customize their appearance, including available text styling options.
 - **Dark/Light mode**: Modern UI with theme switching
 - **Multi-language support**: Available in English, French, Italian, and Malagasy
 - **Desktop application**: Native desktop app using PyWebView
